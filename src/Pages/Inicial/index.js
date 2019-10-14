@@ -7,10 +7,11 @@ import {
   Right
 } from './styles'
 import { Button } from '../../Components/Buttons/ButtonPrincipal';
-import Modal from './Modal'
+import PrimeiroJogo from '../../Components/JogoSubtracao'
+
 
 export default function TelaInicial() {
-  const [isOpen, setOpen] = useState(true)
+  const [isOpen, setOpen] = useState(false)
   const [result, setResult] = useState(0)
 
   return (
@@ -21,12 +22,6 @@ export default function TelaInicial() {
         <Button onClick={() => setOpen(!isOpen)}>
           Começar!
         </Button>
-        <Modal
-          isOpen={isOpen}
-          setOpen={setOpen}
-          result={result}
-          setResult={setResult}
-        />
       </Left>
       <Right>
         <iframe
@@ -38,6 +33,12 @@ export default function TelaInicial() {
           allowfullscreen>
         </iframe>
       </Right>
+      <PrimeiroJogo
+        isOpen={isOpen}
+        setOpen={setOpen}
+        result={result}
+        setResult={setResult}
+      />
     </Boddy>
   );
 }

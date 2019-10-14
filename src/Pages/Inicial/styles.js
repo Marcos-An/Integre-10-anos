@@ -18,9 +18,9 @@ export const Left = styled.div`
   justify-content: center;
 
   @media (max-width: 600px) {
-    padding: 50px 0px 70px 0px;
     text-align: center;
     align-items: center;
+
     .Youtube{
       width: 80%;
       height: 80%;
@@ -32,12 +32,14 @@ export const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   .Youtube{
     width: 100%;
     height: 100%;
   }
   @media (max-width: 600px) {
+    grid-row-start: 1;
+    padding: 50px 0px 50px 0px;
     .Youtube{
       width: 80%;
       height: 80%;
@@ -47,7 +49,7 @@ export const Right = styled.div`
 
 export const Title = styled.h1`
   color: #000;
-  width: 86%;
+  width: 85%;
   font-size: 48px;
   margin: 0px;
   word-break: break-all;
