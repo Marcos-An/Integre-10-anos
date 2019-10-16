@@ -7,12 +7,13 @@ import {
   Right
 } from './styles'
 import { Button } from '../../Components/Buttons/ButtonPrincipal';
+import Video from '../../Components/Video'
 import PrimeiroJogo from '../../Components/JogoSubtracao'
 
 
 export default function TelaInicial() {
   const [isOpen, setOpen] = useState(false)
-  const [result, setResult] = useState(0)
+  const [result, setResult] = useState()
 
   return (
     <Boddy>
@@ -24,14 +25,10 @@ export default function TelaInicial() {
         </Button>
       </Left>
       <Right>
-        <iframe
-          title="Vídeo"
-          className="Youtube"
-          src="https://www.youtube.com/embed/xMHP6xzSxP8"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <Video
+          url="https://www.youtube.com/embed/xMHP6xzSxP8"
+          title="Video inicial"
+        />
       </Right>
       <PrimeiroJogo
         isOpen={isOpen}

@@ -43,6 +43,7 @@ export const Mensagem = styled.h1`
   word-break: break-all;
 
   @media (max-width: 600px) {
-    font-size: 20px;
+    font-size: 18px;
+    text-align: center;
   }
 `;

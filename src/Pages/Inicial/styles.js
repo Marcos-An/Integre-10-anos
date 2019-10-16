@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const Boddy = styled.div`
-  padding: 100px;
+  padding: 20vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 0.7fr;
   justify-content: center;
@@ -13,18 +14,16 @@ export const Boddy = styled.div`
 `;
 
 export const Left = styled.div`
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   justify-content: center;
 
   @media (max-width: 600px) {
     text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
     align-items: center;
-
-    .Youtube{
-      width: 80%;
-      height: 80%;
-    }
   }
 `;
 
@@ -39,7 +38,7 @@ export const Right = styled.div`
   }
   @media (max-width: 600px) {
     grid-row-start: 1;
-    padding: 50px 0px 50px 0px;
+    padding: 30px 0px 0px 0px;
     .Youtube{
       width: 80%;
       height: 80%;

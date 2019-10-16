@@ -1,5 +1,5 @@
-import React from 'react'
-import Modal from '../Modal'
+import React, { useState } from 'react'
+import Modal from '../Modal/Modal'
 import { InputNumber } from 'antd'
 import { Button } from '../../Components/Buttons/ButtonPrincipal'
 import {
@@ -7,9 +7,15 @@ import {
   Conta,
   ContentConta,
   Mensagem
-} from './ModalStyle'
+} from './ModalStyles'
 
 export default function Modals(props) {
+  const [Resposta, setResposta] = useState('')
+
+  const handleChange = () => {
+    setResposta(props.result);
+  }
+
   return (
     <Modal
       title="Acerte a conta e vamos continuar!"
@@ -29,11 +35,21 @@ export default function Modals(props) {
             onChange={value => props.setResult(value)}
           />
         </ContentConta>
-        {props.result === 10 &&
+        {Resposta === '' ? (
+          <Button onClick={handleChange}> Verificar resposta </Button>
+        ) : Resposta === 10 ? (
           <>
             <Mensagem>{`Você é bom em exatas >.<`}</Mensagem>
-            <Button>Continuar</Button>
+            <a href="/Segunda" style={{ color: 'black' }}>
+              <Button >Continuar</Button>
+            </a>
           </>
+        ) : Resposta !== 10 && Resposta !== '' ? (
+          <>
+            <Mensagem>{`Não foi dessa vez, mas tente de novo!`}</Mensagem>
+            <Button onClick={handleChange}>Verificar a resposta</Button>
+          </>
+        ) : null
         }
       </Body>
     </Modal>
