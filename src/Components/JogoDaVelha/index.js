@@ -36,7 +36,9 @@ export default function Dialogs(props) {
               <Mensagem style={{ marginBottom: 40 }}>
                 Você conseguiu terminar mais um desafio, vamos em frente :D
               </Mensagem>
-              <Button>Próximo</Button>
+              <a href="/Terceira" style={{ color: 'black' }}>
+                <Button>Próximo</Button>
+              </a>
             </MensagemBox>
           )}
       </Modal>
