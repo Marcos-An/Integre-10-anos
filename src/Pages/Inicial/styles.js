@@ -17,13 +17,12 @@ export const Left = styled.div`
   display: inline-block;
   flex-direction: column;
   justify-content: center;
+  align-self: center;
 
   @media (max-width: 600px) {
+    padding: 25px;
     text-align: center;
     justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
   }
 `;
 
@@ -38,7 +37,6 @@ export const Right = styled.div`
   }
   @media (max-width: 600px) {
     grid-row-start: 1;
-    padding: 30px 0px 0px 0px;
     .Youtube{
       width: 80%;
       height: 80%;
@@ -54,18 +52,27 @@ export const Title = styled.h1`
   word-break: break-all;
 
   @media (max-width: 600px) {
-    width: 90%;
+    width: 100%;
     font-size: 28px;
   }
+  @media (min-width: 1500px) {
+    font-size: 65px;
+  }
 `;
-export const SubTitle = styled.h3`
+export const SubTitle = styled.h2`
   color: #808080;
   width: 60%;
   margin-bottom: 50px;
 
   @media (max-width: 600px) {
-    padding: 0px;
+    padding-top: 10px;
+    width: 100%;
+    font-size: 15px;
     grid-template-columns: 1fr;
+  }
+  @media (min-width: 1500px) {
+    padding-top: 10px;
+    font-size: 25px;
   }
 `;
 

@@ -5,4 +5,9 @@ export const Button = styled.button`
   font-size: 17px;
   border: none;
   background: #55EDD2;
+
+  @media (min-width: 1500px) {
+    padding: 15px 75px; 
+    font-size: 22px;
+  }
 `;
