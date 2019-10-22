@@ -43,7 +43,7 @@ export default function Memory(props) {
           <Content>
             <Fotos>
               <Foto>
-                <img className="front-face" src="/Assets/cabeca-tarciso.png" alt="Face da Carta" />
+                <img className="front-face" src="/Assets/cabeca1.png" alt="Face da Carta" />
                 <img className="back-face" src="/Assets/logo.png" alt="Costa da Carta" />
               </Foto>
               <Foto url={"/Assets/logo.png"} />
