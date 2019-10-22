@@ -15,6 +15,7 @@ export default function JogoDaForca(props) {
       width={'90vw'}
     >
       <SvgLoader width="500" height="500" path={Forca} />
+      {document.querySelector("#cabeca").style.opacity = 0}
       <button onClick={() => setErros(erros + 1)}> + </button>
     </Modal>
   )
