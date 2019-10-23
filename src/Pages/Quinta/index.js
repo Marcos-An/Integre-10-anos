@@ -12,7 +12,7 @@ import {
 } from './styles'
 
 export default function QuintaTela() {
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, setOpen] = useState(true)
 
   return (
     <Content>
