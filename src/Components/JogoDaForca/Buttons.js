@@ -1,41 +1,41 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Buttons, Button, ContentButtons } from './styles'
 
-export default function ButtonsBox(props) {
-  return (
-    <ContentButtons >
-      <Buttons>
-        <Button> A </Button>
-        <Button> B </Button>
-        <Button> C </Button>
-        <Button> D </Button>
-        <Button> E </Button>
-        <Button> F </Button>
-        <Button> G </Button>
-        <Button> H </Button>
-        <Button> I </Button>
-        <Button> J </Button>
-      </Buttons>
-      <Buttons>
-        <Button> K </Button>
-        <Button> L </Button>
-        <Button> N </Button>
-        <Button> M </Button>
-        <Button> O </Button>
-        <Button> P </Button>
-        <Button> Q </Button>
-        <Button> R </Button>
-        <Button> S </Button>
-      </Buttons>
-      <Buttons>
-        <Button> T </Button>
-        <Button> U </Button>
-        <Button> V </Button>
-        <Button> X </Button>
-        <Button> W </Button>
-        <Button> Y </Button>
-        <Button> Z </Button>
-      </Buttons>
-    </ContentButtons >
-  )
+export default class ButtonsBox extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      letrasAJ: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'],
+      letrasKS: ['k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's'],
+      letrasTZ: ['t', 'u', 'v', 'w', 'x', 'y', 'z']
+    }
+  }
+  render() {
+    const { handle } = this.props
+    return (
+      <ContentButtons >
+        <Buttons>
+          {
+            this.state.letrasAJ.map((item, index) => (
+              <Button key={index} onClick={() => handle(`${item}`)}> {`${item.toUpperCase()}`} </Button>
+            ))
+          }
+        </Buttons>
+        <Buttons>
+          {
+            this.state.letrasKS.map((item, index) => (
+              <Button key={index} onClick={() => handle(`${item}`)}> {`${item.toUpperCase()}`} </Button>
+            ))
+          }
+        </Buttons>
+        <Buttons>
+          {
+            this.state.letrasTZ.map((item, index) => (
+              <Button key={index} onClick={() => handle(`${item}`)}> {`${item.toUpperCase()}`} </Button>
+            ))
+          }
+        </Buttons>
+      </ContentButtons >
+    )
+  }
 }

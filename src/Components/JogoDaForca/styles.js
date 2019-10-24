@@ -24,6 +24,7 @@ export const Palavra = styled.div`
 export const LetraErrada = styled.div`
   display: flex;
   justify-content: center;
+  height: 80px;
   padding-bottom: 30px;  
 `;
 export const Letra = styled.div`
@@ -66,4 +67,33 @@ export const Button = styled.button`
   background-color: rgb(230, 230, 230);
   color: #333;
   font-weight: 600;
+`;
+
+export const Dica = styled.div`
+  width: 300px;
+  height: 50px;
+  margin-top: 60px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.32);
+`;
+
+export const TextDica = styled.h4`
+  
+`;
+
+export const Text = styled.h4`
+  margin-left: 5px;
+`;
+
+export const Acertou = styled.div`
+  height: 78vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1{
+    margin-bottom: 40px;
+  }
 `;
