@@ -1,0 +1,102 @@
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" width="130" height="130" viewBox="0 0 217 213">
+<defs>
+<style>
+  .C1, .C2, .C3, .C4, .C5, .C6, .C7, .C8{
+        fill:none;
+    }
+    .C1{
+        opacity:0.6;
+        transform: rotate(-17deg);
+        isolation:isolate;
+    }
+    .C2, .C3, .C4, .C5, .C6, .C7, .C8{
+        stroke:#040006;
+    }
+    .C1{
+      animation: c1Animate 2s infinite linear ;
+      transform-origin: 50% 50%;
+    }
+    .C2{
+      animation: c2 2s infinite linear ;
+      transform-origin: 50% 50%;
+    }
+    .C3{
+      animation: c3 2s infinite linear ;
+      transform-origin: 50% 50%;
+    }
+    .C4{
+      animation: c4 2s infinite linear ;
+      transform-origin: 50% 50%;
+    }
+    .C5{
+      animation: c5 2s infinite linear ;
+      transform-origin: 50% 50%;
+    }
+    .C6{
+      animation: c6 2s infinite linear ;
+      transform-origin: 50% 50%;
+    }
+    .C7{
+      animation: c7 2s infinite linear ;
+      transform-origin: 50% 50%;
+    }
+    .C8{
+      animation: c8 2s infinite linear ;
+      transform-origin: 50% 50%;
+    }
+    @keyframes c2  {
+        0%  {  transform: translate(0, 0); }
+        50%  { transform: translate(18px, 0); }
+        70%  { transform: translate(54px, 0); }
+        80%  { transform: translate(18px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+     @keyframes c8  {
+        0%  {  transform: translate(0, 0); }
+        50%  { transform: translate(-24px, 0); }
+        70%  { transform: translate(-72px, 0); }
+        80%  { transform: translate(-24px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+     @keyframes c3  {
+        0%  {  transform: translate(0, 0); }
+        50%  { transform: translate(18px, 0); }
+        70%  { transform: translate(36px, 0); }
+        80%  { transform: translate(18px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+      @keyframes c7  {
+        0%  {  transform: translate(0, 0); }
+        50%  { transform: translate(-24px, 0); }
+        70%  { transform: translate(-48px, 0); }
+        80%  { transform: translate(-24px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+     @keyframes c4  {
+        0%  {  transform: translate(0, 0); }
+        50%  { transform: translate(18px, 0); }
+        70%  { transform: translate(18px, 0); }
+        80%  { transform: translate(18px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+        @keyframes c6 {
+        0%  {  transform: translate(0, 0); }
+        50%  { transform: translate(-24px, 0); }
+        70%  { transform: translate(-24px, 0); }
+        80%  { transform: translate(-24px, 0); }
+        100% { transform: translate(0, 0); }
+    }
+
+</style>
+</defs>
+<g class="C1">
+    <rect width="300" height="300"/>
+    <circle class="C2" cx="44.64" cy="107.22" r="29.01"/>
+    <circle class="C3" cx="64.05" cy="105.96" r="29.01"/>
+    <circle class="C4" cx="90.67" cy="107.22" r="29.01"/>
+    <circle class="C5" cx="114.03" cy="107.46" r="29.01"/>
+    <circle class="C6" cx="134.05" cy="106.6" r="29.01"/>
+    <circle class="C7" cx="152.78" cy="106.15" r="29.01"/>
+    <circle class="C8" cx="177.89" cy="105.54" r="29.01"/>
+</g>
+</svg>
