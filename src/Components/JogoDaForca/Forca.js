@@ -8,7 +8,7 @@ export default function Forca(props) {
       y="0"
       enableBackground="new 0 0 382.32 510.84"
       viewBox="0 0 382.32 510.84"
-      height="350"
+      height={`${props.height}`}
     >
       <path
         fill="#444242"

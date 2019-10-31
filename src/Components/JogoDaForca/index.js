@@ -1,6 +1,17 @@
 import React, { Component } from 'react'
-import { Palavra, Letra, Erradas, Content, PalavraBox, LetraErrada, Acertou } from './styles'
+import {
+  Palavra,
+  Letra,
+  Erradas,
+  Content,
+  PalavraBox,
+  LetraErrada,
+  Acertou,
+  Top
+} from './styles'
 import Buttons from './Buttons'
+import ButtonsMobile from './ButtonsMobile'
+import MedaiQuery from 'react-responsive'
 import { Button } from '../Buttons/ButtonPrincipal'
 import Dica from './Dica'
 import Modals from '../Modal/ModalTopAjust0'
@@ -114,7 +125,7 @@ export default class JogoDaForca extends Component {
   handleEvent = (e) => {
     let tecla
     let vem = true
-    if (e.key != undefined) {
+    if (e.key !== undefined) {
       tecla = e.key.toLowerCase()
       vem = false
     } else tecla = e
@@ -158,48 +169,96 @@ export default class JogoDaForca extends Component {
         footer={null}
         width={'97vw'}
       >
-        {
-          this.state.segredo === this.state.sorteada ? (
-            <Acertou>
-              <h1>Você é bom mesmo hein!</h1>
-              <Button> Veja o próximo conteúdo </Button>
-            </Acertou>
-          ) : (
-              <Content>
-                <div>
-                  <Forca erros={this.state.erros} />
-                  <Dica data={this.state.data} index={this.state.index} />
-                </div>
-                <PalavraBox>
-                  <LetraErrada>
+        <MedaiQuery minWidth={1000}>
+          {
+            this.state.segredo === this.state.sorteada ? (
+              <Acertou>
+                <h1>Você é bom mesmo hein!</h1>
+                <a href="/Sexta" style={{ color: 'black' }}>
+                  <Button> Veja o próximo conteúdo</Button>
+                </a>
+              </Acertou>
+            ) : (
+                <Content>
+                  <div>
+                    <Forca height={350} erros={this.state.erros} />
+                    <Dica data={this.state.data} index={this.state.index} />
+                  </div>
+                  <PalavraBox>
+                    <LetraErrada>
+                      {
+                        this.state.letrasErradasArray.map((item, index) => (
+                          <Erradas key={index}>
+                            {`${item}`}
+                          </Erradas>
+                        ))
+                      }
+                    </LetraErrada>
+                    <Palavra>
+                      {
+                        this.state.sorteadaLetras.map((item, index) => (
+                          <Letra key={index}>
+                            {`${item}`}
+                          </Letra>
+                        ))
+                      }
+                    </Palavra>
                     {
-                      this.state.letrasErradasArray.map((item, index) => (
-                        <Erradas key={index}>
-                          {`${item}`}
-                        </Erradas>
-                      ))
+                      this.state.erros === 6 ? (
+                        this.showConfirm()
+                      ) : null
                     }
-                  </LetraErrada>
-                  <Palavra>
+                    <Buttons handle={this.handleEvent} />
+                  </PalavraBox>
+                </Content >
+              )
+          }
+        </MedaiQuery>
+        <MedaiQuery maxWidth={700}>
+          {
+            this.state.segredo === this.state.sorteada ? (
+              <Acertou>
+                <h1>Você é bom mesmo hein!</h1>
+                <Button> Veja o próximo conteúdo </Button>
+              </Acertou>
+            ) : (
+                <Content>
+                  <Top>
+                    <Forca height={230} erros={this.state.erros} />
+                    <LetraErrada>
+                      {
+                        this.state.letrasErradasArray.map((item, index) => (
+                          <Erradas key={index}>
+                            {`${item}`}
+                          </Erradas>
+                        ))
+                      }
+                    </LetraErrada>
+                  </Top>
+                  <PalavraBox>
+                    <Dica data={this.state.data} index={this.state.index} />
+                    <Palavra>
+                      {
+                        this.state.sorteadaLetras.map((item, index) => (
+                          <Letra key={index}>
+                            {`${item}`}
+                          </Letra>
+                        ))
+                      }
+                    </Palavra>
                     {
-                      this.state.sorteadaLetras.map((item, index) => (
-                        <Letra key={index}>
-                          {`${item}`}
-                        </Letra>
-                      ))
+                      this.state.erros === 6 ? (
+                        this.showConfirm()
+                      ) : null
                     }
-                  </Palavra>
-                  {
-                    this.state.erros === 6 ? (
-                      this.showConfirm()
-                    ) : null
-                  }
-                  <Buttons handle={this.handleEvent} />
-                </PalavraBox>
-              </Content >
-            )
-        }
-      </Modals >
+                    <ButtonsMobile handle={this.handleEvent} />
+                  </PalavraBox>
+                </Content >
+              )
+          }
+        </MedaiQuery>
+
+      </Modals>
     )
   }
 }

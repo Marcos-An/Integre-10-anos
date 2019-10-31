@@ -6,6 +6,8 @@ import Segunda from "../Pages/Segunda";
 import Terceira from "../Pages/Terceira";
 import Quarta from "../Pages/Quarta";
 import Quinta from "../Pages/Quinta";
+import Sexta from "../Pages/Sexta";
+import Setima from "../Pages/Setima";
 
 const Routes = () => (
   <BrowserRouter>
@@ -15,6 +17,8 @@ const Routes = () => (
       <Route exact path="/Terceira" component={Terceira} />
       <Route exact path="/Quarta" component={Quarta} />
       <Route exact path="/Quinta" component={Quinta} />
+      <Route exact path="/Sexta" component={Sexta} />
+      <Route exact path="/Setima" component={Setima} />
     </Switch>
   </BrowserRouter>
 );

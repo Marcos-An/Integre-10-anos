@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import Video from '../../Components/Video'
+import Loguinho from '../../Components/Loguinho'
 import JogoDaVelha from '../../Components/JogoDaVelha'
 import { Button } from '../../Components/Buttons/ButtonPrincipal'
+import MediaQuery from 'react-responsive'
 import {
   Body,
   Left,
@@ -17,7 +19,13 @@ export default function SegundaTela() {
   return (
     <Content>
       <Body>
+        <MediaQuery minDeviceWidth={1000}>
+          <Loguinho className="Loguinho" />
+        </MediaQuery>
         <Left>
+          <MediaQuery maxDeviceWidth={700}>
+            <Loguinho className="Loguinho" />
+          </MediaQuery>
           <Video
             url="https://www.youtube.com/embed/xMHP6xzSxP8"
             title="Video inicial"
