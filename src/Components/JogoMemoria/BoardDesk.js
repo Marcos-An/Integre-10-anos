@@ -8,10 +8,10 @@ export default class Memory extends Component {
     super(props);
     this.state = {
       board: [
-        { value: '/Assets/Meme/cabeca1.png', isVisible: false },
-        { value: '/Assets/Meme/cabeca2.jpeg', isVisible: false },
-        { value: '/Assets/Meme/cabeca1.png', isVisible: false },
-        { value: '/Assets/Meme/cabeca2.jpeg', isVisible: false }
+        { value: '/Assets/Meme/cabeca1.png', isVisible: false, check: '' },
+        { value: '/Assets/Meme/cabeca2.jpeg', isVisible: false, check: '' },
+        { value: '/Assets/Meme/cabeca1.png', isVisible: false, check: '' },
+        { value: '/Assets/Meme/cabeca2.jpeg', isVisible: false, check: '' }
       ],
       selected: false
     }
@@ -20,32 +20,47 @@ export default class Memory extends Component {
 
   }
   handleVisible(index) {
-    const newBoard = [...this.state.board]
+    var newBoard = [...this.state.board]
     this.setState({ board: newBoard })
+    console.log();
 
-    if (this.state.selected === false) {
-      newBoard[index].isVisible = true
-      this.setState({ board: newBoard })
-      this.setState({ selected: newBoard[index] })
+    if (newBoard[index].check !== true) {
+      if (this.state.selected === false) {
+        newBoard[index].isVisible = true
+        setTimeout(() => {
+          newBoard[index].check = true
+          this.setState({ board: newBoard })
+          this.setState({ selected: newBoard[index] })
+        }, 100)
 
-    } else if (this.state.selected.value !== newBoard[index].value) {
-      const selectedIndex = newBoard.findIndex((item) => item === this.state.selected ? true : false)
-      newBoard[index].isVisible = true
-      this.setState({ board: newBoard })
-
-      setTimeout(() => {
-        newBoard[index].isVisible = false
-        newBoard[selectedIndex].isVisible = false
+      } else if (this.state.selected.value !== newBoard[index].value) {
+        const selectedIndex = newBoard.findIndex((item) => item === this.state.selected ? true : false)
+        newBoard[index].isVisible = true
         this.setState({ board: newBoard })
-      }, 1500)
-    } else if (this.state.selected.value === newBoard[index].value) {
-      newBoard[index].isVisible = true
-      this.setState({ board: newBoard })
-      setTimeout(() => {
-        this.setState({ selected: false })
-      }, 100)
-    }
+
+        setTimeout(() => {
+          newBoard[index].isVisible = false
+          newBoard[selectedIndex].isVisible = false
+          newBoard[selectedIndex].check = ''
+          this.setState({ board: newBoard })
+          this.setState({ selected: false })
+          newBoard = ''
+        }, 1500)
+      } else if (this.state.selected.value === newBoard[index].value) {
+        newBoard[index].isVisible = true
+        newBoard[index].check = true
+        this.setState({ board: newBoard })
+
+
+        setTimeout(() => {
+          this.setState({ selected: false })
+          newBoard = ''
+        }, 100)
+      }
+    } else console.log("Já escolheu essa meu consagrado");
+
   }
+
   render() {
     const { isOpen, setOpen } = this.props
     return (
@@ -58,7 +73,6 @@ export default class Memory extends Component {
       >
         <Content>
           <Fotos>
-            {console.log(this.state.selected)}
             {this.state.board.map((item, index) => (
               <Foto key={index} onClick={() => this.handleVisible(index)}>
                 {
