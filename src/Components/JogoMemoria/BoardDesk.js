@@ -8,10 +8,24 @@ export default class Memory extends Component {
     super(props);
     this.state = {
       board: [
-        { value: '/Assets/Meme/cabeca1.png', isVisible: false, check: '' },
-        { value: '/Assets/Meme/cabeca2.jpeg', isVisible: false, check: '' },
-        { value: '/Assets/Meme/cabeca1.png', isVisible: false, check: '' },
-        { value: '/Assets/Meme/cabeca2.jpeg', isVisible: false, check: '' }
+        { value: '/Assets/Memoria/Primeira.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Segunda.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Terceira.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Quarta.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Quinta.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Sexta.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Setima.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Oitava.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Decima.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Primeira.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Segunda.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Terceira.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Quarta.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Quinta.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Sexta.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Setima.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Oitava.png', isVisible: false, check: '' },
+        { value: '/Assets/Memoria/Decima.png', isVisible: false, check: '' },
       ],
       selected: false
     }
@@ -45,7 +59,8 @@ export default class Memory extends Component {
           this.setState({ board: newBoard })
           this.setState({ selected: false })
           newBoard = ''
-        }, 1500)
+        }, 1000)
+
       } else if (this.state.selected.value === newBoard[index].value) {
         newBoard[index].isVisible = true
         newBoard[index].check = true

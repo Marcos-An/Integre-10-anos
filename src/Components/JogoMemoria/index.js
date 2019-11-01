@@ -12,7 +12,6 @@ export default class Memory extends Component {
         <MediaQuery maxDeviceWidth={700}>
           <BoardMobile isOpen={isOpen} setOpen={setOpen} />
         </MediaQuery>
-
         <MediaQuery minDeviceWidth={1000}>
           <BoardDesk isOpen={isOpen} setOpen={setOpen} />
         </MediaQuery>
