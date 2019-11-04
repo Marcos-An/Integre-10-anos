@@ -3,21 +3,11 @@ import store from "./store";
 import App from "./containers/App.jsx";
 import Modal from "../Modal/ModalPaddingNone"
 import { Provider } from "react-redux";
-import { Button } from "../Buttons/ButtonPrincipal"
-import { Mensagem } from "../JogoSubtracao/ModalStyles"
-import styled from "styled-components"
 
-const MensagemBox = styled.div`
-  height: 90vh;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 export default function Dialogs(props) {
   const [placar, setPlacar] = useState(0)
   const handlePlacar = () => setPlacar(1)
+  console.log(placar);
 
   return (
     <Provider store={store}>
@@ -27,20 +17,10 @@ export default function Dialogs(props) {
         footer={null}
         width={'90vw'}
       >
-        {placar === 0 ? (
-          <div style={{ height: '94vh' }}>
-            <App handlePlacar={handlePlacar} />
-          </div>
-        ) : (
-            <MensagemBox>
-              <Mensagem style={{ marginBottom: 40 }}>
-                Você conseguiu terminar mais um desafio, vamos em frente :D
-              </Mensagem>
-              <a href="/Terceira" style={{ color: 'black' }}>
-                <Button>Próximo</Button>
-              </a>
-            </MensagemBox>
-          )}
+        <div style={{ height: '94vh' }}>
+          <App handlePlacar={handlePlacar} />
+        </div>
+
       </Modal>
     </Provider>
   );

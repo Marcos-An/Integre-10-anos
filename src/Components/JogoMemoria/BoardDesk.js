@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Content, Fotos, Foto } from './styles'
+import { Content, Fotos, Foto, Box, Mensagem } from './styles'
 import Modal from '../Modal/ModalTopAjust'
+import { Button } from '../Buttons/ButtonPrincipal';
 
 
 export default class Memory extends Component {
@@ -28,16 +29,14 @@ export default class Memory extends Component {
         { value: '/Assets/Memoria/Oitava.jpg', isVisible: false, check: '' },
         { value: '/Assets/Memoria/04.jpg', isVisible: false, check: '' },
       ],
-      selected: false
+      selected: false,
+      terminou: false,
     }
   }
-  SelectedfindIndex() {
 
-  }
   handleVisible(index) {
     var newBoard = [...this.state.board]
     this.setState({ board: newBoard })
-    console.log();
 
     if (newBoard[index].check !== true) {
       if (this.state.selected === false) {
@@ -66,7 +65,7 @@ export default class Memory extends Component {
         newBoard[index].isVisible = true
         newBoard[index].check = true
         this.setState({ board: newBoard })
-
+        this.setState({ terminou: newBoard.every((e) => e.check !== '') })
 
         setTimeout(() => {
           this.setState({ selected: false })
@@ -88,19 +87,35 @@ export default class Memory extends Component {
         width={'95vw'}
       >
         <Content>
-          <Fotos>
-            {this.state.board.map((item, index) => (
-              <Foto key={index} onClick={() => this.handleVisible(index)}>
-                {
-                  item.isVisible ? (
-                    <img className="front-face" src={`${item.value}`} alt="Face da Carta" />
-                  ) : (
-                      <img className="back-face" src="/Assets/logo.png" alt="Costa da Carta" />
-                    )
-                }
-              </Foto>
-            ))}
-          </Fotos>
+          {this.state.terminou ? (
+            <Box>
+              <Mensagem>
+                <span role="img" aria-label="smile" style={{ fontSize: 25, marginRight: 10 }}>&#128513;</span>
+                Sua memória está ótima!
+                <span role="img" aria-label="smile" style={{ fontSize: 25, marginRight: 10 }}>&#128513;</span>
+              </Mensagem>
+              <a href="/Quarta" style={{ color: 'black' }}>
+                <Button style={{ marginTop: -10, marginBottom: 30 }}>
+                  Sou fera! Next!
+                  </Button>
+              </a>
+            </Box>
+          ) : (
+              <Fotos>
+                {this.state.board.map((item, index) => (
+                  <Foto key={index} onClick={() => this.handleVisible(index)}>
+                    {
+                      item.isVisible ? (
+                        <img className="front-face" src={`${item.value}`} alt="Face da Carta" />
+                      ) : (
+                          <img className="back-face" src="/Assets/logo.png" alt="Costa da Carta" />
+                        )
+                    }
+                  </Foto>
+                ))}
+              </Fotos>
+            )
+          }
         </Content>
       </Modal>
     )

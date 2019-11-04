@@ -4,7 +4,7 @@
  */
 
 export const NEPHRITIS = '#cc2e36'
-export const WISTERIA = '#000'
+export const WISTERIA = '#C9C9C9'
 export const PLAYER = '#11ba58'
 export const MIDNIGHT_BLUE = '#4DBBA7'
 export const SUN_FLOWER = 'rgb(241, 196, 15)'

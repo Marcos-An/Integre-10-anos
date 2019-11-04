@@ -7,8 +7,27 @@ export const Content = styled.div`
   align-items: center;
 `;
 
+export const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+`;
+export const Mensagem = styled.h1`
+  color: #929393;
+  font-size: 25px;
+  margin-bottom: 40px;
+  word-break: break-all;
+
+  @media (max-width: 600px) {
+    font-size: 18px;
+    text-align: center;
+  }
+`;
 export const Fotos = styled.div`
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(6, 150px);
   grid-column-gap: 30px;
   grid-row-gap: 20px;

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Content } from './styles'
 import JogoMemoria from '../../Components/JogoMemoria'
-import MediaQuery from 'react-responsive'
 import Desk from './Desk'
 import { Button } from '../../Components/Buttons/ButtonPrincipal'
 
@@ -21,11 +20,7 @@ export default function Terceira() {
   ]);
   return (
     <Content>
-      <MediaQuery maxDeviceWidth={700}>
-      </MediaQuery>
-      <MediaQuery minDeviceWidth={1000}>
-        <Desk imagens={imagens} />
-      </MediaQuery>
+      <Desk imagens={imagens} />
       <Button style={{ marginTop: 20 }} onClick={() => setOpen(!isOpen)}> Olhei </Button>
       <JogoMemoria
         isOpen={isOpen}

@@ -16,32 +16,60 @@ export default function TelaInicial() {
   const [result, setResult] = useState()
 
   return (
-    <Boddy>
+    <>
       <MediaQuery minDeviceWidth={1000}>
-        <Loguinho className="Loguinho" top="8%" />
-      </MediaQuery>
-      <Left>
-        <Title>Queremos jogar um jogo com você. Topas?</Title>
-        <SubTitle>Conheça a nossa história enquanto se diverte!</SubTitle>
-        <Button style={{ marginBottom: 20 }} onClick={() => setOpen(!isOpen)}>
-          Começar!
+        <Boddy>
+          <Loguinho className="Loguinho" top="8%" />
+          <Left>
+            <Title>Queremos jogar um jogo com você. Topas?</Title>
+            <SubTitle>Conheça a nossa história enquanto se diverte!</SubTitle>
+            <Button style={{ marginBottom: 20 }} onClick={() => setOpen(!isOpen)}>
+              Começar!
           </Button>
-      </Left>
-      <Right>
-        <MediaQuery maxDeviceWidth={700}>
-          <Loguinho className="Loguinho" />
-        </MediaQuery>
-        <Video
-          url="https://www.youtube.com/embed/xMHP6xzSxP8"
-          title="Video inicial"
-        />
-      </Right>
-      <PrimeiroJogo
-        isOpen={isOpen}
-        setOpen={setOpen}
-        result={result}
-        setResult={setResult}
-      />
-    </Boddy>
+          </Left>
+          <Right>
+            <MediaQuery maxDeviceWidth={700}>
+              <Loguinho className="Loguinho" />
+            </MediaQuery>
+            <Video
+              url="https://www.youtube.com/embed/xMHP6xzSxP8"
+              title="Video inicial"
+            />
+          </Right>
+          <PrimeiroJogo
+            isOpen={isOpen}
+            setOpen={setOpen}
+            result={result}
+            setResult={setResult}
+          />
+        </Boddy>
+      </MediaQuery>
+
+
+      <MediaQuery maxDeviceWidth={700}>
+        <Boddy>
+          <Left>
+            <Loguinho className="Loguinho" />
+            <Title>Queremos jogar um jogo com você. Topas?</Title>
+            <SubTitle>Conheça a nossa história enquanto se diverte!</SubTitle>
+          </Left>
+          <Right>
+            <Video
+              url="https://www.youtube.com/embed/xMHP6xzSxP8"
+              title="Video inicial"
+            />
+            <Button className="btn" onClick={() => setOpen(!isOpen)}>
+              Começar!
+          </Button>
+          </Right>
+          <PrimeiroJogo
+            isOpen={isOpen}
+            setOpen={setOpen}
+            result={result}
+            setResult={setResult}
+          />
+        </Boddy>
+      </MediaQuery>
+    </>
   );
 }

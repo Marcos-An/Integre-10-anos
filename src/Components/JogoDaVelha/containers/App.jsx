@@ -54,31 +54,12 @@ const StyledBoard = styled.div`
 
 
 
-const showConfirm = () => {
-  confirm({
-    title: 'Você tem certeza?',
-    content: 'Isso vai limpar o tabuleiro e recomeçar o jogo',
-    onOk() {
-      this.props.actions.restart();
-    },
-    onCancel() { }
-  });
-}
 
 const openNotificationCasaCheia = type => {
   notification[type]({
     message: 'Esta casa já está ocupada',
     description:
       'A casa que você está tentando colocar a sua peça já está ocupada. Coloque em outra casa!',
-    duration: 4,
-  });
-};
-
-const openNotificationTermineJogo = type => {
-  notification[type]({
-    message: 'Termine o jogo primeiro!',
-    description:
-      'Não é possível mudar de peça agora, termine o jogo primeiro.',
     duration: 4,
   });
 };
@@ -114,27 +95,31 @@ class App extends Component {
       });
     }, 250);
   };
-  togglePlayer = name => {
-    if (this.props.game.players.human.name === name) return;
-    if (!this.everyIsEmpty()) openNotificationTermineJogo("error");
 
-    this.props.actions.togglePlayer();
-  };
   start = () => {
     this.props.actions.restart();
   };
+
   restart = () => {
     if (this.everyIsEmpty()) return openNotificationNecesario();
-
-    showConfirm();
+    this.showConfirm();
   };
+  showConfirm = () => {
+    let ok = () => this.start()
+    confirm({
+      title: 'Você tem certeza?',
+      content: 'Isso vai limpar o tabuleiro e recomeçar o jogo',
+      onOk() { ok() },
+      onCancel() { }
+    });
+  }
   render() {
     const { human, computer } = this.props.game.players;
 
     return (
       <Fragment>
         <MediaQuery maxDeviceWidth={700}>
-          <StyledScoreboardX onClick={() => this.togglePlayer("x")}>
+          <StyledScoreboardX>
             <Scoreboard
               width={40}
               playerName="x"
@@ -144,7 +129,7 @@ class App extends Component {
               scoreBackground={SUN_FLOWER}
             />
           </StyledScoreboardX>
-          <StyledScoreboardO onClick={() => this.togglePlayer("o")}>
+          <StyledScoreboardO>
             <Scoreboard
               width={40}
               playerName="o"
@@ -159,9 +144,9 @@ class App extends Component {
             <Board
               board={this.props.game.board}
               onClick={this.play}
-              cellWidth={80}
+              cellWidth={60}
               cellColor="white"
-              borderWidth={6}
+              borderWidth={5}
               borderColor={MIDNIGHT_BLUE}
               colorPlayerX={PLAYER}
               colorPlayerO={NEPHRITIS}
@@ -183,9 +168,9 @@ class App extends Component {
 
 
         <MediaQuery minDeviceWidth={800}>
-          <StyledScoreboardX onClick={() => this.togglePlayer("x")}>
+          <StyledScoreboardX >
             <Scoreboard
-              width={50}
+              width={60}
               playerName="x"
               playerBackground={WISTERIA}
               playerColor={human.name === "x" ? SUN_FLOWER : "white"}
@@ -193,9 +178,9 @@ class App extends Component {
               scoreBackground={SUN_FLOWER}
             />
           </StyledScoreboardX>
-          <StyledScoreboardO onClick={() => this.togglePlayer("o")}>
+          <StyledScoreboardO >
             <Scoreboard
-              width={50}
+              width={60}
               playerName="o"
               playerBackground={WISTERIA}
               playerColor={human.name === "o" ? SUN_FLOWER : "white"}

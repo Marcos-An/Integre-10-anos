@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import lightness from "lightness";
 import Player from "./Player.jsx";
+import { Button } from "../../Buttons/ButtonPrincipal"
 
 const StyledContainer = styled.div`
   position: absolute;
@@ -61,9 +62,18 @@ const StyledMessage = styled.div`
 const StyledMessageText = styled.div`
   margin-top: 20px;
   text-align: center;
-  font-family: Pacifico, "Comic Sans MS", cursive;
+  font-family: 'Muli', sans-serif;
+  font-weight: 700;
   font-size: 30px;
   color: white;
+`;
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .btn{
+    margin-top: 30px;
+  }
 `;
 
 const Winner = ({ name }) => (
@@ -82,32 +92,46 @@ const Alert = ({
   buttonColor,
   winner
 }) => (
-  <StyledContainer
-    isOpen={isOpen}
-    height={containerHeight}
-    color={containerColor}
-  >
-    <StyledButton
-      onClick={isOpen ? onClickButtonOpened : onClickButtonClosed}
-      width={buttonWidth}
-      color={buttonColor}
+    <StyledContainer
+      isOpen={isOpen}
+      height={containerHeight}
+      color={containerColor}
     >
-      <i className="material-icons">
-        {isOpen ? buttonIconOpened : buttonIconClosed}
-      </i>
-    </StyledButton>
-    <StyledMessage isOpen={isOpen}>
-      {winner ? (
-        <Winner name={winner} />
-      ) : (
-        <Fragment>
-          <Winner name="x" />
-          <Winner name="o" />
-        </Fragment>
-      )}
-      <StyledMessageText>VENCEU!</StyledMessageText>
-    </StyledMessage>
-  </StyledContainer>
-);
+      <StyledButton
+        onClick={isOpen ? onClickButtonOpened : onClickButtonClosed}
+        width={buttonWidth}
+        color={buttonColor}
+      >
+        <i className="material-icons">
+          {isOpen ? buttonIconOpened : buttonIconClosed}
+        </i>
+      </StyledButton>
+      <StyledMessage isOpen={isOpen}>
+        {winner === 'o' ? (
+          <Content>
+            {console.log(winner)}
+            <Winner name={winner} />
+            <StyledMessageText>VENCEU!</StyledMessageText>
+          </Content>
+        ) : winner === 'x' ? (
+          <Content>
+            <Winner name={winner} />
+            <StyledMessageText>VOCÊ VENCEU!</StyledMessageText>
+            <a href="/Terceira" style={{ color: 'black' }}>
+              <Button className='btn'> Você é D+! Continue!</Button>
+            </a>
+          </Content>
+        ) : (
+              <Content>
+                <Fragment>
+                  <Winner name="x" />
+                  <Winner name="o" />
+                </Fragment>
+                <StyledMessageText>DEU VELHA!</StyledMessageText>
+              </Content>
+            )}
+      </StyledMessage>
+    </StyledContainer>
+  );
 
 export default Alert;

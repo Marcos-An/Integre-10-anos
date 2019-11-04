@@ -12,7 +12,7 @@ export default function loguinho(props) {
         <Imagem src={`${Loguinho}`} alt="" top={props.top} />
       </MediaQuery>
       <MediaQuery minDeviceWidth={1501}>
-        <Imagem src={`${Logo}`} alt="" />
+        <Imagem src={`${Logo}`} alt="" top={props.top} />
       </MediaQuery>
     </>
   )

@@ -10,7 +10,7 @@ import {
   Right,
   Center,
   Content,
-  Text
+  Text,
 } from './styles'
 
 export default function SegundaTela() {
@@ -19,12 +19,15 @@ export default function SegundaTela() {
   return (
     <Content>
       <Body>
-        <MediaQuery minDeviceWidth={1000}>
+        <MediaQuery minDeviceWidth={1500}>
+          <Loguinho className="Loguinho" top="6%" />
+        </MediaQuery>
+        <MediaQuery minDeviceWidth={1000} maxDeviceWidth={1400}>
           <Loguinho className="Loguinho" top="4%" />
         </MediaQuery>
         <Left>
           <MediaQuery maxDeviceWidth={700}>
-            <Loguinho className="Loguinho" />
+            <Loguinho className="Loguinho" top="0%" />
           </MediaQuery>
           <Video
             url="https://www.youtube.com/embed/xMHP6xzSxP8"
@@ -40,11 +43,10 @@ export default function SegundaTela() {
           </Text>
           <JogoDaVelha isOpen={isOpen} setOpen={setOpen} />
         </Center>
-        <Right>
-          <h1>Imagem</h1>
-        </Right>
+        <Right url="/Assets/Bg/bg2.png" />
+        <Button className="btn" onClick={() => setOpen(!isOpen)}> Próximo jogo </Button>
       </Body>
-      <Button onClick={() => setOpen(!isOpen)}> Próximo jogo </Button>
+      <Button className="btn1" onClick={() => setOpen(!isOpen)}> Próximo jogo </Button>
     </Content>
   );
 }

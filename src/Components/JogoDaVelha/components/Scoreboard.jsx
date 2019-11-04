@@ -33,19 +33,19 @@ const Scoreboard = ({
   scoreBackground,
   score = 0
 }) => (
-  <StyledContainer>
-    <StyledPlayerContainer width={width} background={playerBackground}>
-      <Player
-        playerName={playerName}
-        width={width - 20}
-        lineWidth={width / 8}
-        color={playerColor}
-      />
-    </StyledPlayerContainer>
-    <StyledScoreContainer width={width} background={scoreBackground}>
-      {score}
-    </StyledScoreContainer>
-  </StyledContainer>
-);
+    <StyledContainer>
+      <StyledPlayerContainer width={width} background={playerBackground}>
+        <Player
+          playerName={playerName}
+          width={width - 20}
+          lineWidth={width / 8}
+          color={playerColor}
+        />
+      </StyledPlayerContainer>
+      <StyledScoreContainer width={width} background={scoreBackground}>
+        {score}
+      </StyledScoreContainer>
+    </StyledContainer>
+  );
 
 export default Scoreboard;

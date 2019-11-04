@@ -22,7 +22,7 @@ export const Boddy = styled.div`
   background-repeat: no-repeat;
 
   @media (min-width: 1500px) {
-    background-image: url('/Assets/Bg/Triangulo copy.svg'), 
+    background-image: url('/Assets/Bg/Triangulo.svg'), 
                       url('/Assets/Bg/Bolinhas.svg'),
                       url('/Assets/Bg/Molas.svg'),
                       url('/Assets/Bg/BolinhaCinza.svg'),
@@ -36,18 +36,36 @@ export const Boddy = styled.div`
                        right 900px top 50px,
                        left 700px bottom 200px;
   }
+  @media (max-width: 700px) {
+    background-image: url('/Assets/Bg/TrianguloMb.svg'), 
+                      url('/Assets/Bg/Bolinhas.svg'),
+                      url('/Assets/Bg/BolinhaAzulMb.svg'),
+                      url('/Assets/Bg/BolinhaCinza.svg'),
+                      url('/Assets/Bg/Rectangle.svg');
+
+  background-position: right 0px top 10px,
+                       right 60px bottom 40px,
+                       left 20px top 70px,
+                       right 30px top 230px,
+                       left 700px bottom 200px;
+    height: 100%;
+    padding: 0px;
+    grid-template-columns: 1fr;
+
+  }
   
   .Loguinho{
     position: absolute;
     top: -8%;
   }
-
-  @media (max-width: 600px) {
-    height: 100%;
-    padding: 0px;
-    align-content: center;
-    grid-template-columns: 1fr;
+  .btn{
+    margin-top: 30px;
+    @media (max-width: 700px) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
   }
+
   
 `;
 
@@ -71,8 +89,7 @@ export const Right = styled.div`
   
   @media (max-width: 600px) {
     flex-direction: column;
-    grid-row-start: 1;
-    height: 235px;
+    height: 486px;
   }
 `;
 
@@ -89,6 +106,7 @@ export const Title = styled.h1`
 
   @media (max-width: 600px) {
     width: 100%;
+    line-height: 35px;
     font-size: 28px;
   }
   @media (min-width: 1500px) {
@@ -107,8 +125,12 @@ export const SubTitle = styled.h2`
 
   @media (max-width: 600px) {
     width: 100%;
-    font-size: 15px;
+    padding: 0px 50px;
+    margin: 20px 0px 10px 0px;
+    font-size: 17px;
     grid-template-columns: 1fr;
+    text-align: center;
+    align-self: center;
   }
   @media (min-width: 1500px) {
     padding-top: 10px;
