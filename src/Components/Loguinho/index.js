@@ -5,14 +5,14 @@ import Logo from './10anos copy.svg'
 import MediaQuery from 'react-responsive'
 
 
-export default function loguinho() {
+export default function loguinho(props) {
   return (
     <>
       <MediaQuery maxDeviceWidth={1500}>
-       <Imagem src={`${Loguinho}`} alt="" />
+        <Imagem src={`${Loguinho}`} alt="" top={props.top} />
       </MediaQuery>
       <MediaQuery minDeviceWidth={1501}>
-       <Imagem src={`${Logo}`} alt="" />
+        <Imagem src={`${Logo}`} alt="" />
       </MediaQuery>
     </>
   )

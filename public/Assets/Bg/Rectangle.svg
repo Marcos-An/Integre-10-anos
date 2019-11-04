@@ -13,7 +13,6 @@
             75% {transform: rotate(-17deg);} 
             100% { transform: rotate(0deg); }
         }
-        }
     </style>
 </defs>
 <rect class="cls-1" width="48.23" height="1.51"/>

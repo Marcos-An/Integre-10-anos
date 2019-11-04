@@ -5,11 +5,15 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   justify-items: center;
-
+  background-image: url('/Assets/Bg/Triangulo.svg'),
+                    url('/Assets/Bg/TrianguloCinza.svg');
+  background-position: left 0px bottom 100px,
+                       left 500px top 30px;;
+  background-repeat: no-repeat;
 `;
 export const Body = styled.div`
-  padding: 20vh;
-  height: 80vh;
+  padding: 20vh 15vh 4vh 15vh;
+  height: 87vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 50px;
@@ -36,13 +40,21 @@ export const Left = styled.div`
 `;
 
 export const Center = styled.div`
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    height: 40px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const Text = styled.h2`
   color: #808080;
   text-align: center;
-  padding: 20px; 
+  padding: 17px; 
+  font-weight: 300;
+  font-family: 'Muli', sans-serif;
 
   @media (max-width: 700px){
     font-size: 17px;

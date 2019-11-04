@@ -20,7 +20,7 @@ export default function SegundaTela() {
     <Content>
       <Body>
         <MediaQuery minDeviceWidth={1000}>
-          <Loguinho className="Loguinho" />
+          <Loguinho className="Loguinho" top="4%" />
         </MediaQuery>
         <Left>
           <MediaQuery maxDeviceWidth={700}>
@@ -32,6 +32,7 @@ export default function SegundaTela() {
           />
         </Left>
         <Center>
+          <img src="/Assets/setaVermelha.png" alt="" />
           <Text>
             “Nossa história é, sem dúvida, marcada por muitos desafios
             e superações, mas acima de tudo, muita dedicação e

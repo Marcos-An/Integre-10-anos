@@ -10,35 +10,38 @@ export const Content = styled.div`
 
 export const Fotos = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 210px);
+  grid-template-columns: repeat(5, 190px);
   justify-content: center;
-  grid-gap: 20px;
+  grid-row-gap: 40px;
+  grid-column-gap: 50px;
  
   @media (max-width: 700px){
     grid-template-columns: repeat(2, 150px);
     grid-gap: 20px;
   }
-  @media (min-width: 1500){
+  @media (min-width: 1500px){
     grid-template-columns: repeat(5, 250px);
     grid-gap: 30px;
     padding: 40px
   }
 `;
 
-
 export const Foto = styled.div`
-  height: 170px;
+  height: 140px;
   background-image: url("${props => props.url}");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 5px 5px 0px 0px;
-  
+
+  @media (min-width: 1500px){
+    height: 190px;
+  }
 `;
 
 export const FotoZoom = styled.div`
-  height: 40%;
-  width: 40%;
+  height: 60%;
+  width: 60%;
   background-image: url("${props => props.url}");
   background-position: center;
   background-repeat: no-repeat;
@@ -58,7 +61,7 @@ export const Modal = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-image: url("/Assets/bg.png");
+  background-image: url("/Assets/bg.png");  
 `;
 
 export const Close = styled.span`
@@ -111,10 +114,8 @@ export const DescriptionZoom = styled.h2`
 export const Text = styled.h2`
   color: #6B6B6B;
   font-size: 18px;
-  margin-left: 9%;
   margin-bottom: 30px;
   word-break: break-all;
-  align-self: flex-start;
   font-family: 'Muli', sans-serif;
 
   @media (max-width: 600px) {

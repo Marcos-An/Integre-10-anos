@@ -4,7 +4,7 @@ import { Modal } from 'antd'
 export default function Modals(props) {
   return (
     <Modal
-      style={{ top: 30 }}
+      style={{ top: 10 }}
       title={props.title}
       visible={props.isOpen}
       onCancel={props.onCancel}

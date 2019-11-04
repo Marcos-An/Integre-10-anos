@@ -18,7 +18,7 @@ export default function TelaInicial() {
   return (
     <Boddy>
       <MediaQuery minDeviceWidth={1000}>
-        <Loguinho className="Loguinho" />
+        <Loguinho className="Loguinho" top="8%" />
       </MediaQuery>
       <Left>
         <Title>Queremos jogar um jogo com você. Topas?</Title>

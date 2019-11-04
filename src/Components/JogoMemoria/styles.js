@@ -9,7 +9,7 @@ export const Content = styled.div`
 
 export const Fotos = styled.div`
   display: grid;
-  grid-template-columns: repeat(6, 140px);
+  grid-template-columns: repeat(6, 150px);
   grid-column-gap: 30px;
   grid-row-gap: 20px;
   
@@ -18,7 +18,7 @@ export const Fotos = styled.div`
     grid-gap: 20px;
   }
   @media (min-width: 1500px){
-    grid-template-columns: repeat(5, 250px);
+    grid-template-columns: repeat(6, 150px);
     grid-gap: 30px;
     padding: 40px
   }
@@ -29,7 +29,6 @@ export const Foto = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  transform: scale(1);
 
   .front-face{
     width: 100%;
@@ -57,9 +56,8 @@ export const Foto = styled.div`
   .front-face,
   .back-face {
     width: 100%;
-    height: 80%;
+    height: 100%;
     position: absolute;
-    border-radius: 10px;
     background: #fff;
   }
   }
