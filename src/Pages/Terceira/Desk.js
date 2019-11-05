@@ -1,5 +1,7 @@
 import React from 'react'
-import { Fotos, Foto, Text, Description, Modal, Close, FotoZoom, DescriptionZoom } from './styles'
+import { Fotos, Foto, Text, Description, Modal, Close, FotoZoom, DescriptionZoom, Box } from './styles'
+import Loguinho from '../../Components/Loguinho'
+import MediaQuery from 'react-responsive'
 
 const Click = (index) => {
   var Modal = document.getElementsByClassName("Modal")
@@ -23,7 +25,15 @@ const ClickNext = (index) => {
 export default function Terceira(props) {
   return (
     <>
-      <Text>Acho melhor dar uma boa olhada nas imagens...</Text>
+      <MediaQuery minDeviceWidth={1000}>
+        <Loguinho className="Loguinho" top="4%" left="7%" />
+      </MediaQuery>
+      <Box>
+        <MediaQuery maxDeviceWidth={700}>
+          <Loguinho className="Loguinho" top="4%" />
+        </MediaQuery>
+        <Text>Acho melhor dar uma boa olhada nas imagens...</Text>
+      </Box>
       <Fotos>
         {
           props.imagens.map((item, index) => (

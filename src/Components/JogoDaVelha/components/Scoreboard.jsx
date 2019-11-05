@@ -4,12 +4,13 @@ import Player from "./Player.jsx";
 
 const StyledContainer = styled.div`
   display: flex;
+  margin-top: -30px;
 `;
 
 const StyledPlayerContainer = styled.div`
   padding: 10px 10px;
   background-color: ${props => props.background};
-
+ 
   // Centralize the player icon
   div {
     margin: 0 auto;

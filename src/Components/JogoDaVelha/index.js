@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import store from "./store";
 import App from "./containers/App.jsx";
 import Modal from "../Modal/ModalPaddingNone"
+import MediaQuery from "react-responsive";
 import { Provider } from "react-redux";
 
 export default function Dialogs(props) {
@@ -11,17 +12,42 @@ export default function Dialogs(props) {
 
   return (
     <Provider store={store}>
-      <Modal
-        isOpen={props.isOpen}
-        onCancel={() => props.setOpen(!props.isOpen)}
-        footer={null}
-        width={'90vw'}
-      >
-        <div style={{ height: '94vh' }}>
-          <App handlePlacar={handlePlacar} />
-        </div>
-
-      </Modal>
+      <MediaQuery maxDeviceWidth={700}>
+        <Modal
+          isOpen={props.isOpen}
+          onCancel={() => props.setOpen(!props.isOpen)}
+          footer={null}
+          width={'94vw'}
+        >
+          <div style={{ height: '100vh' }}>
+            <App handlePlacar={handlePlacar} />
+          </div>
+        </Modal>
+      </MediaQuery>
+      <MediaQuery minDeviceWidth={900} maxDeviceWidth={1400}>
+        <Modal
+          isOpen={props.isOpen}
+          onCancel={() => props.setOpen(!props.isOpen)}
+          footer={null}
+          width={'94vw'}
+        >
+          <div style={{ height: '94vh' }}>
+            <App handlePlacar={handlePlacar} />
+          </div>
+        </Modal>
+      </MediaQuery>
+      <MediaQuery minDeviceWidth={1500}>
+        <Modal
+          isOpen={props.isOpen}
+          onCancel={() => props.setOpen(!props.isOpen)}
+          footer={null}
+          width={'70vw'}
+        >
+          <div style={{ height: '90vh' }}>
+            <App handlePlacar={handlePlacar} />
+          </div>
+        </Modal>
+      </MediaQuery>
     </Provider>
   );
 }

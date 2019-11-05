@@ -4,19 +4,29 @@ export const Content = styled.div`
   display: flex;
   height: 100vh;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .btn{
+    margin-top: 10px;
+    align-self: center;
+  }
+  @media (max-width: 700px){
+    justify-content: flex-start;
+    align-items: flex-start;
+    .btn{
+      margin: 20px 0px;
+      align-self: center;
+    }
+  }
 `;
 
 export const Fotos = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 190px);
-  justify-content: center;
   grid-row-gap: 40px;
   grid-column-gap: 50px;
- 
+  align-self: center;
+
   @media (max-width: 700px){
-    grid-template-columns: repeat(2, 150px);
+    grid-template-columns: repeat(2, 140px);
     grid-gap: 20px;
   }
   @media (min-width: 1500px){
@@ -48,6 +58,16 @@ export const FotoZoom = styled.div`
   background-size: contain;
   border-radius: 5px 5px 0px 0px;
 `;
+
+export const Box = styled.div`
+  display: flex;  
+  justify-content: flex-end;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+`;
+
 
 export const Modal = styled.div`
   display: none; 
@@ -83,8 +103,7 @@ export const Description = styled.h2`
   font-family: 'Muli', sans-serif;
 
   @media (max-width: 600px) {
-    font-size: 18px;
-    text-align: center;
+    font-size: 14px;
   }
   @media (min-width: 1500){
     color: black;
@@ -101,7 +120,7 @@ export const DescriptionZoom = styled.h2`
   word-break: break-word;
 
   @media (max-width: 600px) {
-    font-size: 18px;
+    font-size: 17px;
     text-align: center;
   }
   @media (min-width: 1500){
@@ -112,19 +131,21 @@ export const DescriptionZoom = styled.h2`
 `;
 
 export const Text = styled.h2`
-  color: #6B6B6B;
+  color: #000;
   font-size: 18px;
-  margin-bottom: 30px;
-  word-break: break-all;
+  margin: 50px 0px;
+  margin-right: 8%;
+  word-break: break-word;
   font-family: 'Muli', sans-serif;
 
   @media (max-width: 600px) {
-    font-size: 18px;
+    font-size: 18px !important;
     text-align: center;
+    margin: 20px 0px 40px 0px;
+    padding: 0px 50px;
   }
   @media (min-width: 1500){
     color: black;
     font-size: 32px;
-    word-break: break-all;
   }
 `;

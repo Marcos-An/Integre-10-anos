@@ -11,6 +11,7 @@ import Loguinho from '../../Components/Loguinho'
 import { Button } from '../../Components/Buttons/ButtonPrincipal';
 import Video from '../../Components/Video'
 import PrimeiroJogo from '../../Components/JogoSubtracao'
+
 export default function TelaInicial() {
   const [isOpen, setOpen] = useState(false)
   const [result, setResult] = useState()

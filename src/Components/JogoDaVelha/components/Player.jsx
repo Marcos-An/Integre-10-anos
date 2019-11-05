@@ -13,6 +13,7 @@ const players = [
 ]
 const index1 = Math.floor((Math.random() * 3))
 const index2 = Math.floor((Math.random() * (6 - 3) + 3))
+
 const StyledPlayerX = styled.div`
   position: relative;
   display: inline-block;
@@ -38,13 +39,13 @@ const StyledPlayerX = styled.div`
     /* From left to right.
        From bottom to top. */
     transform: rotate(45deg);
-    transform: scale(2);
+    transform: scale(1);
   }
   &::after {
     /* From right to left.
        From top to bottom. */
     transform: rotate(-45deg);
-    transform: scale(2);
+    transform: scale(1);
   }
 `;
 

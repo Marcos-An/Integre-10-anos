@@ -4,7 +4,7 @@ export const Boddy = styled.div`
   padding: 20vh;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 0.7fr;
+  grid-template-columns: 1fr 0.6fr;
   justify-content: center;  
   background-image: url('/Assets/Bg/Triangulo.svg'), 
                     url('/Assets/Bg/Bolinhas.svg'),
@@ -86,7 +86,8 @@ export const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  padding: 0px 18px;
+
   @media (max-width: 600px) {
     flex-direction: column;
     height: 486px;
@@ -114,6 +115,7 @@ export const Title = styled.h1`
     font-size: 50px;
   }
 `;
+
 export const SubTitle = styled.h2`
   color: #808080;
   width: 40%;

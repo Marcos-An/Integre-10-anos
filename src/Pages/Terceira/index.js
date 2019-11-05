@@ -4,6 +4,7 @@ import JogoMemoria from '../../Components/JogoMemoria'
 import Desk from './Desk'
 import { Button } from '../../Components/Buttons/ButtonPrincipal'
 
+
 export default function Terceira() {
   const [isOpen, setOpen] = useState(false);
   const [imagens] = useState([
@@ -21,7 +22,7 @@ export default function Terceira() {
   return (
     <Content>
       <Desk imagens={imagens} />
-      <Button style={{ marginTop: 20 }} onClick={() => setOpen(!isOpen)}> Olhei </Button>
+      <Button className='btn' onClick={() => setOpen(!isOpen)}> Olhei </Button>
       <JogoMemoria
         isOpen={isOpen}
         setOpen={setOpen}

@@ -7,7 +7,6 @@ const StyledGrid = styled.div`
   grid-template-columns: auto auto auto;
   grid-gap: ${props => props.width}px;
   background-color: ${props => props.color};
-
 `;
 
 const StyledGridItem = styled.div`
@@ -40,7 +39,6 @@ const Board = ({
   board,
   onClick,
   cellWidth,
-  cellColor,
   borderWidth,
   borderColor,
   colorPlayerX,
@@ -51,14 +49,14 @@ const Board = ({
         <StyledGridItem
           key={index}
           width={cellWidth}
-          color={cellColor}
+          color={index % 2 !== 1 ? '#c9c9c9' : '#F8F8F8'}
           onClick={() => onClick(index)}
         >
           {playerName ? (
             <Player
               playerName={playerName}
               lineWidth={borderWidth}
-              width={cellWidth - 20}
+              width={cellWidth + 12}
               colorPlayerX={colorPlayerX}
               colorPlayerO={colorPlayerO}
             />

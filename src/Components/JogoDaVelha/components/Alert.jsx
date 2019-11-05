@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import lightness from "lightness";
 import Player from "./Player.jsx";
-import { Button } from "../../Buttons/ButtonPrincipal"
+import { ButtonOrange } from "../../Buttons/ButtonPrincipal"
 
 const StyledContainer = styled.div`
   position: absolute;
@@ -14,12 +14,14 @@ const StyledContainer = styled.div`
 `;
 
 const StyledButton = styled.button`
-  position: absolute;
-  width: ${props => props.width}px;
-  height: ${props => props.width}px;
+  position: absolute; 
+  width: 100px;
+  height:  50px;
   border: none;
-  border-radius: 50%;
   outline: none;
+  font-family: 'Muli', sans-serif;
+  font-size: 23px;
+  font-weight: 700;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -28,6 +30,9 @@ const StyledButton = styled.button`
   color: white;
   background-color: ${props => props.color};
 
+  @media (max-width: 700px){
+    width: 155px;
+  }
   &:hove{
     transfr {
     transform: translate(-50%, -50%) scale(1.15);
@@ -39,6 +44,7 @@ const StyledButton = styled.button`
   }
   .material-icons {
     font-size: ${props => props.width / 2}px;
+  }
   }
 `;
 
@@ -111,14 +117,14 @@ const Alert = ({
           <Content>
             {console.log(winner)}
             <Winner name={winner} />
-            <StyledMessageText>VENCEU!</StyledMessageText>
+            <StyledMessageText>A maquina venceu!</StyledMessageText>
           </Content>
         ) : winner === 'x' ? (
           <Content>
             <Winner name={winner} />
-            <StyledMessageText>VOCÊ VENCEU!</StyledMessageText>
+            <StyledMessageText>Você venceu!</StyledMessageText>
             <a href="/Terceira" style={{ color: 'black' }}>
-              <Button className='btn'> Você é D+! Continue!</Button>
+              <ButtonOrange className='btn'> Você é um anjo de luz! Continue!</ButtonOrange>
             </a>
           </Content>
         ) : (
@@ -127,7 +133,7 @@ const Alert = ({
                   <Winner name="x" />
                   <Winner name="o" />
                 </Fragment>
-                <StyledMessageText>DEU VELHA!</StyledMessageText>
+                <StyledMessageText>Deu velha!</StyledMessageText>
               </Content>
             )}
       </StyledMessage>

@@ -47,12 +47,82 @@ const StyledScoreboardO = styled(StyledScoreboard)`
 
 const StyledBoard = styled.div`
   position: absolute;
-  top: 50%;
-  left: 50%;
+  display: flex;
+  align-items: center;
+  top: 46%;
+  left: 46%;
   transform: translate(-50%, -50%);
+
+  @media (max-width: 700px){
+    flex-direction: column;
+    left: 50%;
+    margin-bottom: 50%;
+  }
+  @media (min-width: 1500px){
+    width: 65%;
+  }
 `;
 
+export const TextBox = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  left: 20%;
+  @media (max-width: 700px) {
+    left: 0%;
+    margin: 13% 0% 8% 0%;
+  }
+  @media (min-width: 1500px){
+    left: 15%;
+  }
+`;
 
+export const Text = styled.h2`
+  color: #6B6B6B;
+  text-align: center;
+  position: relative;
+  font-size: 18px;
+  word-break: break-word;
+
+  @media (max-width: 600px) {
+    font-size: 15px;
+    text-align: center;
+  }
+  @media (min-width: 1500px){
+    font-size: 20px;
+    width: 100%;
+    word-break: break-word;
+  }
+`;
+
+export const Title = styled.h2`
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+  word-break: break-word;
+  left: 20%;
+
+  @media (max-width: 600px) {
+    font-size: 18px;
+    text-align: center;
+  }
+  @media (min-width: 1500px){
+    font-size: 20px;
+    left: 15%;
+    width: 100%;
+    word-break: break-word;
+  }
+`;
+
+export const Content = styled.div`
+  display: flex;
+
+  @media (max-width: 600px) {
+  }
+  @media (min-width: 1500px){
+  }
+`;
 
 
 const openNotificationCasaCheia = type => {
@@ -121,7 +191,7 @@ class App extends Component {
         <MediaQuery maxDeviceWidth={700}>
           <StyledScoreboardX>
             <Scoreboard
-              width={40}
+              width={60}
               playerName="x"
               playerBackground={WISTERIA}
               playerColor={human.name === "x" ? SUN_FLOWER : "white"}
@@ -131,7 +201,7 @@ class App extends Component {
           </StyledScoreboardX>
           <StyledScoreboardO>
             <Scoreboard
-              width={40}
+              width={60}
               playerName="o"
               playerBackground={WISTERIA}
               playerColor={human.name === "o" ? SUN_FLOWER : "white"}
@@ -140,13 +210,18 @@ class App extends Component {
             />
           </StyledScoreboardO>
           {human.victories >= 1 && this.props.handlePlacar()}
+
           <StyledBoard>
+            <TextBox>
+              <Title> Jogo da Velha!</Title>
+              <Text> Arraste a cabeça de um de nossos amigos para vencer a máquina.</Text>
+            </TextBox>
             <Board
               board={this.props.game.board}
               onClick={this.play}
-              cellWidth={60}
+              cellWidth={85}
               cellColor="white"
-              borderWidth={5}
+              borderWidth={0}
               borderColor={MIDNIGHT_BLUE}
               colorPlayerX={PLAYER}
               colorPlayerO={NEPHRITIS}
@@ -158,8 +233,8 @@ class App extends Component {
             onClickButtonClosed={this.restart}
             containerHeight={10}
             containerColor={MIDNIGHT_BLUE}
-            buttonIconOpened="+1 VEZ"
-            buttonIconClosed="+1 chance"
+            buttonIconOpened="Voltar"
+            buttonIconClosed="+1x"
             buttonWidth={65}
             buttonColor={ORANGE}
             winner={this.props.game.winner}
@@ -167,7 +242,7 @@ class App extends Component {
         </MediaQuery>
 
 
-        <MediaQuery minDeviceWidth={800}>
+        <MediaQuery minDeviceWidth={800} maxDeviceWidth={1400} >
           <StyledScoreboardX >
             <Scoreboard
               width={60}
@@ -189,26 +264,88 @@ class App extends Component {
             />
           </StyledScoreboardO>
           {human.victories >= 1 && this.props.handlePlacar()}
-          <StyledBoard>
-            <Board
-              board={this.props.game.board}
-              onClick={this.play}
-              cellWidth={120}
-              cellColor="white"
-              borderWidth={8}
-              borderColor={MIDNIGHT_BLUE}
-              colorPlayerX={PLAYER}
-              colorPlayerO={NEPHRITIS}
-            />
-          </StyledBoard>
+          <Content>
+            <StyledBoard>
+              <Board
+                board={this.props.game.board}
+                onClick={this.play}
+                cellWidth={120}
+                cellColor="white"
+                borderWidth={0}
+                borderColor={''}
+                colorPlayerX={PLAYER}
+                colorPlayerO={NEPHRITIS}
+              />
+              <TextBox>
+                <Title> Jogo da Velha!</Title>
+                <Text> Arraste a cabeça de um de nossos amigos para vencer a máquina.</Text>
+              </TextBox>
+            </StyledBoard>
+          </Content>
           <Alert
             isOpen={this.props.game.isFinished}
             onClickButtonOpened={this.start}
             onClickButtonClosed={this.restart}
             containerHeight={10}
             containerColor={MIDNIGHT_BLUE}
-            buttonIconOpened="+1 VEZ"
-            buttonIconClosed="+1 chance"
+            buttonIconOpened="Voltar"
+            buttonIconClosed="+1x"
+            buttonWidth={65}
+            buttonColor={ORANGE}
+            winner={this.props.game.winner}
+          />
+        </MediaQuery>
+
+
+
+        <MediaQuery minDeviceWidth={1500}>
+          <StyledScoreboardX >
+            <Scoreboard
+              width={60}
+              playerName="x"
+              playerBackground={WISTERIA}
+              playerColor={human.name === "x" ? SUN_FLOWER : "white"}
+              score={human.name === "x" ? human.victories : computer.victories}
+              scoreBackground={SUN_FLOWER}
+            />
+          </StyledScoreboardX>
+          <StyledScoreboardO >
+            <Scoreboard
+              width={60}
+              playerName="o"
+              playerBackground={WISTERIA}
+              playerColor={human.name === "o" ? SUN_FLOWER : "white"}
+              score={human.name === "o" ? human.victories : computer.victories}
+              scoreBackground={SUN_FLOWER}
+            />
+          </StyledScoreboardO>
+          {human.victories >= 1 && this.props.handlePlacar()}
+          <Content>
+            <StyledBoard>
+              <Board
+                board={this.props.game.board}
+                onClick={this.play}
+                cellWidth={170}
+                cellColor="white"
+                borderWidth={0}
+                borderColor={''}
+                colorPlayerX={PLAYER}
+                colorPlayerO={NEPHRITIS}
+              />
+              <TextBox>
+                <Title> Jogo da Velha!</Title>
+                <Text> Arraste a cabeça de um de nossos amigos para vencer a máquina.</Text>
+              </TextBox>
+            </StyledBoard>
+          </Content>
+          <Alert
+            isOpen={this.props.game.isFinished}
+            onClickButtonOpened={this.start}
+            onClickButtonClosed={this.restart}
+            containerHeight={10}
+            containerColor={MIDNIGHT_BLUE}
+            buttonIconOpened="Voltar"
+            buttonIconClosed="+1x"
             buttonWidth={65}
             buttonColor={ORANGE}
             winner={this.props.game.winner}
