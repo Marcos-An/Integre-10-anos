@@ -20,17 +20,21 @@ export default function TelaInicial() {
     <>
       <MediaQuery minDeviceWidth={1000}>
         <Boddy>
-          <Loguinho className="Loguinho" top="8%" />
           <Left>
-            <Title>Queremos jogar um jogo com você. Topas?</Title>
-            <SubTitle>Conheça a nossa história enquanto se diverte!</SubTitle>
-            <Button style={{ marginBottom: 20 }} onClick={() => setOpen(!isOpen)}>
-              Começar!
-          </Button>
+            <Loguinho />
+            <div>
+              <Title>Queremos jogar um jogo com você. Topas?</Title>
+              <SubTitle>Conheça a nossa história enquanto se diverte!</SubTitle>
+            </div>
+            <div style={{ display: 'inline-block' }}>
+              <Button onClick={() => setOpen(!isOpen)}>
+                Começar!
+              </Button>
+            </div>
           </Left>
           <Right>
             <MediaQuery maxDeviceWidth={700}>
-              <Loguinho className="Loguinho" />
+              <Loguinho />
             </MediaQuery>
             <Video
               url="https://www.youtube.com/embed/xMHP6xzSxP8"
@@ -56,10 +60,10 @@ export default function TelaInicial() {
           </Left>
           <Right>
             <Video
-              url="https://www.youtube.com/embed/xMHP6xzSxP8"
+              url="https://www.youtube.com/embed/_xKCwzgI68s"
               title="Video inicial"
             />
-            <Button className="btn" onClick={() => setOpen(!isOpen)}>
+            <Button style={{ margin: 30 }} onClick={() => setOpen(!isOpen)}>
               Começar!
           </Button>
           </Right>

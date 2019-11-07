@@ -1,151 +1,47 @@
 import styled from 'styled-components'
 
+export const Body = styled.div`
+  background: url(${props => props.url});
+  padding: 12vh 20vh ;
+  @media (max-width: 700px){
+    padding: 8vh 20vh ;
+  }
+  `;
 export const Content = styled.div`
-  display: flex;
   height: 100vh;
-  flex-direction: column;
-  .btn{
-    margin-top: 10px;
-    align-self: center;
-  }
-  @media (max-width: 700px){
-    justify-content: flex-start;
-    align-items: flex-start;
-    .btn{
-      margin: 20px 0px;
-      align-self: center;
-    }
-  }
-`;
-
-export const Fotos = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 190px);
-  grid-row-gap: 40px;
-  grid-column-gap: 50px;
-  align-self: center;
-
-  @media (max-width: 700px){
-    grid-template-columns: repeat(2, 140px);
-    grid-gap: 20px;
-  }
-  @media (min-width: 1500px){
-    grid-template-columns: repeat(5, 250px);
-    grid-gap: 30px;
-    padding: 40px
-  }
-`;
-
-export const Foto = styled.div`
-  height: 140px;
-  background-image: url("${props => props.url}");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 5px 5px 0px 0px;
-
-  @media (min-width: 1500px){
-    height: 190px;
-  }
-`;
-
-export const FotoZoom = styled.div`
-  height: 60%;
-  width: 60%;
-  background-image: url("${props => props.url}");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border-radius: 5px 5px 0px 0px;
-`;
-
-export const Box = styled.div`
-  display: flex;  
-  justify-content: flex-end;
-
-  @media (max-width: 600px) {
-    flex-direction: column;
-  }
-`;
-
-
-export const Modal = styled.div`
-  display: none; 
-  position: fixed;
-  flex-direction: column;
-  justify-content: center;
+  display: flex;
+  text-align: center;
   align-items: center;
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-image: url("/Assets/bg.png");  
-`;
+  flex-direction: column;
 
-export const Close = styled.span`
-  position: absolute;
-  font-family: 'Muli', sans-serif;
-  top: 15px;
-  right: 35px;
-  color: #000;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-`;
-
-export const Description = styled.h2`
-  color: #6B6B6B;
-  font-size: 13px;
-  margin-top: 10px;
-  word-break: break-word;
-  font-family: 'Muli', sans-serif;
-
-  @media (max-width: 600px) {
-    font-size: 14px;
+  .video{
+    justify-self: flex-start;
+    align-self: flex-start;
   }
-  @media (min-width: 1500){
-    color: black;
-    font-size: 32px;
-    word-break: break-all;
-  }
-`;
-export const DescriptionZoom = styled.h2`
-  color: #000;
-  font-size: 17px;
-  margin-top: 20px;
-  font-weight: 300px;
-  font-family: 'Muli', sans-serif;
-  word-break: break-word;
 
-  @media (max-width: 600px) {
-    font-size: 17px;
+  @media (max-width: 700px){
     text-align: center;
-  }
-  @media (min-width: 1500){
-    color: black;
-    font-size: 32px;
-    word-break: break-all;
+    padding: 0px 10px 50px 10px;
   }
 `;
 
-export const Text = styled.h2`
-  color: #000;
-  font-size: 18px;
-  margin: 50px 0px;
-  margin-right: 8%;
-  word-break: break-word;
-  font-family: 'Muli', sans-serif;
+export const VideoContent = styled.div`
+  margin-top: 5vh;
+  height: 50vh; 
+  width: 50vw;
 
-  @media (max-width: 600px) {
-    font-size: 18px !important;
-    text-align: center;
-    margin: 20px 0px 40px 0px;
-    padding: 0px 50px;
+  @media (max-width: 700px){
+    width: 100vw;
   }
-  @media (min-width: 1500){
-    color: black;
-    font-size: 32px;
+`;
+
+export const Text = styled.h3`
+  color: #5C5C5C;
+  font-family: 'Muli', sans-serif;
+  margin: 20px 0px 30px 0px;
+  width: 50vw;
+  
+  @media (max-width: 700px){
+    width: 80vw;
   }
 `;

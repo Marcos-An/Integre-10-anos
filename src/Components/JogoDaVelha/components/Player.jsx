@@ -9,7 +9,7 @@ const players = [
   "/Assets/velha/matheus.png",
   "/Assets/velha/carol.png",
   "/Assets/Meme/cabeca1.png",
-  "/Assets/Meme/cabeca2.jpeg",
+  "/Assets/Meme/cabeca2.png",
 ]
 const index1 = Math.floor((Math.random() * 3))
 const index2 = Math.floor((Math.random() * (6 - 3) + 3))

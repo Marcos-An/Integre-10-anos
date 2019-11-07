@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Content = styled.div`
   display: flex;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-items: center;
@@ -18,6 +19,7 @@ export const Content = styled.div`
   @media (max-width: 700px){
     background-image: none;
   }
+
   .btn{
     display: none;
     
@@ -34,6 +36,7 @@ export const Content = styled.div`
       display: none;
     }
   }
+
   @media (min-width: 1500px) {
     background-image: url('/Assets/Bg/Triangulo.svg'),
                       url('/Assets/Bg/TrianguloCinza.svg'),
@@ -46,8 +49,8 @@ export const Content = styled.div`
 
 `;
 export const Body = styled.div`
-  padding: 20vh 15vh 4vh 15vh;
-  height: 80vh;
+  padding: 25vh 20vh 4vh 20vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 50px;
@@ -61,20 +64,26 @@ export const Body = styled.div`
   }
   @media (min-width: 1500px){
     grid-gap: 30px;
-    height: 744px;
-
+    height: 99vh;
   }
 `;
+
 export const Left = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   height: 100%;
 
-  @media (max-width: 600px) {
+  div {
+    margin: -13vh 0vh 5vh 0vh;
+  }
+  @media (max-width: 700px) {
     flex-direction: column;
+    align-items: center;
     grid-row-start: 1;
     height: 80vh;
+    div {
+      margin: 4vh 0vh 2vh 0vh;
+    }
   }
 `;
 
@@ -82,12 +91,14 @@ export const Center = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  img {
-    height: 40px;
-    margin-bottom: 20px;
 
+  img {
+    margin-top: -5vh;
+    height: 100px;
     @media (min-width: 1500px) {
-      height: 50px;
+      margin-top: 0vh;
+      height: 150px;
+      width: 150px;
     }
     @media (max-width: 700px) {
       display: none;
@@ -96,14 +107,18 @@ export const Center = styled.div`
 `;
 
 export const Text = styled.h2`
-  color: #808080;
+  color: #4B4949;
   text-align: center;
   padding: 17px; 
   font-weight: 300;
   font-family: 'Muli', sans-serif;
-
+  margin-top: -5vh;
   @media (max-width: 700px){
+    margin-top: 0vh;
     font-size: 17px;
+  }
+  @media (min-width: 1500px){
+    margin-top: -50px;
   }
 `;
 

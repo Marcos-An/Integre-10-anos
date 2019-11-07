@@ -90,7 +90,7 @@ export default class Memory extends Component {
                 Sua memória está ótima!
                 <span role="img" aria-label="smile" style={{ fontSize: 25, marginRight: 10 }}>&#128513;</span>
               </Mensagem>
-              <a href="/Quarta" style={{ color: 'black' }}>
+              <a href="/Quinta" style={{ color: 'black' }}>
                 <Button style={{ marginTop: -10, marginBottom: 30 }}>
                   Sou fera! Next!
                   </Button>

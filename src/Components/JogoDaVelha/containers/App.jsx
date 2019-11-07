@@ -228,6 +228,7 @@ class App extends Component {
             />
           </StyledBoard>
           <Alert
+            url={this.props.url}
             isOpen={this.props.game.isFinished}
             onClickButtonOpened={this.start}
             onClickButtonClosed={this.restart}
@@ -283,6 +284,7 @@ class App extends Component {
             </StyledBoard>
           </Content>
           <Alert
+            url={this.props.url}
             isOpen={this.props.game.isFinished}
             onClickButtonOpened={this.start}
             onClickButtonClosed={this.restart}
@@ -339,6 +341,7 @@ class App extends Component {
             </StyledBoard>
           </Content>
           <Alert
+            url={this.props.url}
             isOpen={this.props.game.isFinished}
             onClickButtonOpened={this.start}
             onClickButtonClosed={this.restart}

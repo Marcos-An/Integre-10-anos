@@ -117,9 +117,7 @@ export default class JogoDaForca extends Component {
       onOk: () => {
         this.restart();
       },
-      onCancel() {
-        console.log('Cancel');
-      },
+      onCancel() { },
     });
   }
   handleEvent = (e) => {
@@ -129,7 +127,6 @@ export default class JogoDaForca extends Component {
       tecla = e.key.toLowerCase()
       vem = false
     } else tecla = e
-    console.log(tecla);
     setTimeout(() => {
       if (this.state.sorteada !== this.state.segredo && this.state.erros < 6) {
         if (this.state.segredo.indexOf(tecla) > -1) {
@@ -174,7 +171,7 @@ export default class JogoDaForca extends Component {
             this.state.segredo === this.state.sorteada ? (
               <Acertou>
                 <h1>Você é bom mesmo hein!</h1>
-                <a href="/Sexta" style={{ color: 'black' }}>
+                <a href="/Quarta" style={{ color: 'black' }}>
                   <Button> Veja o próximo conteúdo</Button>
                 </a>
               </Acertou>
@@ -214,6 +211,7 @@ export default class JogoDaForca extends Component {
               )
           }
         </MedaiQuery>
+
         <MedaiQuery maxWidth={700}>
           {
             this.state.segredo === this.state.sorteada ? (
@@ -247,8 +245,10 @@ export default class JogoDaForca extends Component {
                       }
                     </Palavra>
                     {
-                      this.state.erros === 6 ? (
-                        this.showConfirm()
+                      this.state.erros > 6 ? (
+                        setTimeout(() => {
+                          this.showConfirm()
+                        }, 100)
                       ) : null
                     }
                     <ButtonsMobile handle={this.handleEvent} />

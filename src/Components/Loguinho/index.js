@@ -1,7 +1,6 @@
 import React from 'react'
 import { Imagem } from './styles'
-import Loguinho from './10anos.svg'
-import Logo from './10anos copy.svg'
+import Loguinho from './logo.png'
 import MediaQuery from 'react-responsive'
 
 
@@ -12,7 +11,7 @@ export default function loguinho(props) {
         <Imagem src={`${Loguinho}`} alt="" top={props.top} left={props.left} />
       </MediaQuery>
       <MediaQuery minDeviceWidth={1501}>
-        <Imagem src={`${Logo}`} alt="" top={props.top} />
+        <Imagem src={`${Loguinho}`} alt="" top={props.top} left={props.left} />
       </MediaQuery>
     </>
   )

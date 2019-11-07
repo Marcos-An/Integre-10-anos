@@ -2,21 +2,25 @@ import styled from 'styled-components'
 
 export const Content = styled.div`
   display: flex;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-items: center;
+  padding: 12vh 20vh 4vh 20vh;
+
   background-image: url('/Assets/Bg/Circulo.svg'),
                     url('/Assets/Bg/Triangulo.svg'),
                     url('/Assets/Bg/BolinhaAzul.svg');
 
-  background-position: left 20px bottom 0px,
-                       right 200px top 30px,
+  background-position: left 10vh bottom 0vh,
+                       right 40vh top 5vh,
                        right 50px bottom 30px;
 
   background-repeat: no-repeat;
 
   @media (max-width: 700px){
     background-image: none;
+    padding: 4vh 0vh;
   }
   .btn{
     display: none;
@@ -28,42 +32,43 @@ export const Content = styled.div`
     }
   }
   .btn1{
-    margin: 20px 0px 40px 0px;
+    margin: 6vh 0px 2vh 0px;
 
     @media (max-width: 700px){
       display: none;
     }
   }
-  @media (min-width: 1500px) {
-    background-image: url('/Assets/Bg/Triangulo.svg'),
-                      url('/Assets/Bg/TrianguloCinza.svg'),
-                      url('/Assets/Bg/BolinhaAzul.svg');
-
-  background-position: left 30px bottom 100px,
-                       right 200px top 30px,
-                       right 50px bottom 30px;
-  }
-
 `;
+
 export const Body = styled.div`
-  padding: 20vh 15vh 4vh 15vh;
-  height: 80vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 50px;
+  grid-column-gap: 50px;
+  height: 100vh;  
   align-items: center;
 
   @media (max-width: 700px){
     grid-gap: 30px;
     grid-template-columns: 1fr;
     padding: 0px;
-    height: 50vh;
   }
   @media (min-width: 1500px){
     grid-gap: 30px;
-    height: 744px;
   }
 `;
+export const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  height: 30vh;
+  @media (max-width: 700px) {
+    align-self: center;
+  }
+  @media (min-width: 1500px) {
+    height: 20vh;
+  }
+`;
+
 export const Left = styled.div`
   display: flex;
   align-items: center;
@@ -77,7 +82,7 @@ export const Left = styled.div`
   @media (max-width: 600px) {
     flex-direction: column;
     grid-row-start: 1;
-    height: 80vh;
+    height: 60vh;
   }
 `;
 
@@ -92,10 +97,11 @@ export const Center = styled.div`
   .Direita{
     align-self: flex-end;
   }
+
 `;
 
 export const Text = styled.p`
-  color: #808080;
+  color: #4B4949;
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: center;

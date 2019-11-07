@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import styled from "styled-components";
 import lightness from "lightness";
 import Player from "./Player.jsx";
@@ -81,6 +81,9 @@ const Content = styled.div`
     margin-top: 30px;
   }
 `;
+const Box = styled.div`
+  display: flex;
+`;
 
 const Winner = ({ name }) => (
   <Player playerName={name} width={150} lineWidth={25} color="white" />
@@ -96,7 +99,8 @@ const Alert = ({
   buttonIconClosed,
   buttonWidth,
   buttonColor,
-  winner
+  winner,
+  url
 }) => (
     <StyledContainer
       isOpen={isOpen}
@@ -117,22 +121,22 @@ const Alert = ({
           <Content>
             {console.log(winner)}
             <Winner name={winner} />
-            <StyledMessageText>A maquina venceu!</StyledMessageText>
+            <StyledMessageText>A máquina venceu!</StyledMessageText>
           </Content>
         ) : winner === 'x' ? (
           <Content>
             <Winner name={winner} />
             <StyledMessageText>Você venceu!</StyledMessageText>
-            <a href="/Terceira" style={{ color: 'black' }}>
+            <a href={`${url}`} style={{ color: 'black' }}>
               <ButtonOrange className='btn'> Você é um anjo de luz! Continue!</ButtonOrange>
             </a>
           </Content>
         ) : (
               <Content>
-                <Fragment>
+                <Box>
                   <Winner name="x" />
                   <Winner name="o" />
-                </Fragment>
+                </Box>
                 <StyledMessageText>Deu velha!</StyledMessageText>
               </Content>
             )}

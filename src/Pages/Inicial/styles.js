@@ -13,29 +13,16 @@ export const Boddy = styled.div`
                     url('/Assets/Bg/BolinhaCinza.svg'),
                     url('/Assets/Bg/Rectangle.svg');
 
-  background-position: left 50px top 100px,
-                       right 40px bottom 45px,
-                       left 50px bottom 20px,
-                       right 650px top 40px,
-                       right 100px top 20px,
-                       left 500px bottom 100px;
+  background-position: left 5vh top 15vh,
+                       right 3vh bottom 6vh,
+                       left 10vh bottom 2vh,
+                       right 90vh top 5vh,
+                       right 20vh top 4vh,
+                       left 80vh bottom 10vh;
+              
   background-repeat: no-repeat;
 
-  @media (min-width: 1500px) {
-    background-image: url('/Assets/Bg/Triangulo.svg'), 
-                      url('/Assets/Bg/Bolinhas.svg'),
-                      url('/Assets/Bg/Molas.svg'),
-                      url('/Assets/Bg/BolinhaCinza.svg'),
-                      url('/Assets/Bg/BolinhaAzul copy.svg'),
-                      url('/Assets/Bg/Rectangle.svg');
-
-  background-position: left 90px top 150px,
-                       right 40px bottom 45px,
-                       left 90px bottom 100px,
-                       right 250px top 20px,
-                       right 900px top 50px,
-                       left 700px bottom 200px;
-  }
+  
   @media (max-width: 700px) {
     background-image: url('/Assets/Bg/TrianguloMb.svg'), 
                       url('/Assets/Bg/Bolinhas.svg'),
@@ -48,32 +35,32 @@ export const Boddy = styled.div`
                        left 20px top 70px,
                        right 30px top 230px,
                        left 700px bottom 200px;
-    height: 100%;
-    padding: 0px;
-    grid-template-columns: 1fr;
-
-  }
-  
-  .Loguinho{
-    position: absolute;
-    top: -8%;
-  }
-  .btn{
-    margin-top: 30px;
-    @media (max-width: 700px) {
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
+                       height: 100%;
+                       padding: 0px;
+                       grid-template-columns: 1fr;
   }
 
+  @media (min-width: 1500px) {
+    background-image: url('/Assets/Bg/TrianguloBig.svg'), 
+                    url('/Assets/Bg/Bolinhas.svg'),
+                    url('/Assets/Bg/Molas.svg'),
+                    url('/Assets/Bg/BolinhaAzul.svg'),
+                    url('/Assets/Bg/BolinhaCinza.svg'),
+                    url('/Assets/Bg/Rectangle.svg');
   
-`;
+  background-position: left 5vh top 15vh,
+                        right 3vh bottom 6vh,
+                        left 10vh bottom 2vh,
+                        right 90vh top 5vh,
+                        right 20vh top 4vh,
+                        left 80vh bottom 10vh;
+  }
+  `;
 
 export const Left = styled.div`
-  display: inline-block;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-self: center;
+  justify-content: space-between;
 
   @media (max-width: 600px) {
     padding: 25px;
@@ -92,6 +79,9 @@ export const Right = styled.div`
     flex-direction: column;
     height: 486px;
   }
+  @media (min-width: 1500px) {
+    padding: 4px 0px !important;
+  }
 `;
 
 export const Title = styled.h1`
@@ -102,7 +92,6 @@ export const Title = styled.h1`
   font-size: 40px;
   line-height: 54px;
   font-weight: 900;
-  margin: 0px;
   word-break: break-word;
 
   @media (max-width: 600px) {
@@ -111,19 +100,19 @@ export const Title = styled.h1`
     font-size: 28px;
   }
   @media (min-width: 1500px) {
-    width: 60%;
+    width: 70%;
     font-size: 50px;
   }
 `;
 
 export const SubTitle = styled.h2`
-  color: #808080;
+  color: #4B4949;
   width: 40%;
   font-weight: 300;
   font-family: 'Muli', sans-serif;
   word-break: break-word;
   font-size: 20px;
-  margin: 20px 0px 50px 0px;
+  margin: 20px 0px 0px 0px;
 
   @media (max-width: 600px) {
     width: 100%;

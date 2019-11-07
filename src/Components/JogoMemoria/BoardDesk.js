@@ -31,6 +31,7 @@ export default class Memory extends Component {
       ],
       selected: false,
       terminou: false,
+      lockboard: false
     }
   }
 
@@ -38,7 +39,7 @@ export default class Memory extends Component {
     var newBoard = [...this.state.board]
     this.setState({ board: newBoard })
 
-    if (newBoard[index].check !== true) {
+    if (newBoard[index].check !== true && this.state.lockboard !== true) {
       if (this.state.selected === false) {
         newBoard[index].isVisible = true
         setTimeout(() => {
@@ -48,6 +49,7 @@ export default class Memory extends Component {
         }, 100)
 
       } else if (this.state.selected.value !== newBoard[index].value) {
+        this.setState({ lockboard: true })
         const selectedIndex = newBoard.findIndex((item) => item === this.state.selected ? true : false)
         newBoard[index].isVisible = true
         this.setState({ board: newBoard })
@@ -56,23 +58,26 @@ export default class Memory extends Component {
           newBoard[index].isVisible = false
           newBoard[selectedIndex].isVisible = false
           newBoard[selectedIndex].check = ''
+          this.setState({ lockboard: false })
           this.setState({ board: newBoard })
           this.setState({ selected: false })
           newBoard = ''
         }, 1000)
 
       } else if (this.state.selected.value === newBoard[index].value) {
+        this.setState({ lockboard: true })
         newBoard[index].isVisible = true
         newBoard[index].check = true
         this.setState({ board: newBoard })
         this.setState({ terminou: newBoard.every((e) => e.check !== '') })
 
         setTimeout(() => {
+          this.setState({ lockboard: false })
           this.setState({ selected: false })
           newBoard = ''
         }, 100)
       }
-    } else console.log("Já escolheu essa meu consagrado");
+    }
 
   }
 
@@ -94,7 +99,7 @@ export default class Memory extends Component {
                 Sua memória está ótima!
                 <span role="img" aria-label="smile" style={{ fontSize: 25, marginRight: 10 }}>&#128513;</span>
               </Mensagem>
-              <a href="/Quarta" style={{ color: 'black' }}>
+              <a href="/Quinta" style={{ color: 'black' }}>
                 <Button style={{ marginTop: -10, marginBottom: 30 }}>
                   Sou fera! Next!
                   </Button>
@@ -103,7 +108,7 @@ export default class Memory extends Component {
           ) : (
               <Fotos>
                 {this.state.board.map((item, index) => (
-                  <Foto key={index} onClick={() => this.handleVisible(index)}>
+                  <Foto id="all" key={index} onClick={() => this.handleVisible(index)}>
                     {
                       item.isVisible ? (
                         <img className="front-face" src={`${item.value}`} alt="Face da Carta" />

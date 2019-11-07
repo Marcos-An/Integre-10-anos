@@ -8,6 +8,7 @@ import Quarta from "../Pages/Quarta";
 import Quinta from "../Pages/Quinta";
 import Sexta from "../Pages/Sexta";
 import Setima from "../Pages/Setima";
+import Oitava from "../Pages/Oitava";
 
 const Routes = () => (
   <BrowserRouter>
@@ -19,6 +20,7 @@ const Routes = () => (
       <Route exact path="/Quinta" component={Quinta} />
       <Route exact path="/Sexta" component={Sexta} />
       <Route exact path="/Setima" component={Setima} />
+      <Route exact path="/Oitava" component={Oitava} />
     </Switch>
   </BrowserRouter>
 );
