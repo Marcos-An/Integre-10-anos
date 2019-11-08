@@ -4,7 +4,7 @@ export const Content = styled.div`
   display: flex;
   height: 100vh;
   flex-direction: column;
-  padding: 12vh 20vh 100vh 20vh;
+  padding: 7vh 20vh 93vh 20vh;
   .btn{
     margin-top: 10px;
     align-self: center;
@@ -19,7 +19,7 @@ export const Content = styled.div`
     }
   }
   @media (min-width: 1500px){
-    padding: 12vh 20vh 80vh 20vh;
+    padding: 7vh 20vh 80vh 20vh;
     .btn{
       margin: 20px 0px;
       align-self: center;

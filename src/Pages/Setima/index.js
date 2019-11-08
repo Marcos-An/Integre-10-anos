@@ -1,58 +1,31 @@
 import React, { useState } from 'react'
-import { Content, Fotos, Foto, Text } from './styles'
-import MediaQuery from 'react-responsive'
+import { Content } from './styles'
+import Desk from './Desk'
 import { Button } from '../../Components/Buttons/ButtonPrincipal'
 
-var indexVelho = ''
-const Local = (item, index) => {
-
-  if (indexVelho !== '' && indexVelho !== index) {
-    document.getElementById(indexVelho).style.boxShadow = "0px 0px 5px 0px rgba(0,0,0,0.15)"
-    document.getElementById(index).style.boxShadow = "0px 0px 5px 0px rgba(0,0,0,0.30)"
-    localStorage.setItem('url', item)
-  }
-  if (index !== indexVelho) {
-    document.getElementById(index).style.boxShadow = "0px 0px 8px 0px rgba(61,193,76,0.90)"
-    indexVelho = index
-    console.log(index);
-    console.log(indexVelho);
-    localStorage.setItem('url', item)
-  }
-}
 export default function Terceira() {
-  const [imgs] = useState([
-    "/Assets/Meme/cabeca1.png",
-    "/Assets/Meme/cabeca2.jpeg",
-    "/Assets/Meme/cabeca1.png",
-    "/Assets/Meme/cabeca2.jpeg",
-    "/Assets/Meme/cabeca1.png",
-    "/Assets/Meme/cabeca2.jpeg",
-    "/Assets/Meme/cabeca1.png",
-    "/Assets/Meme/cabeca2.jpeg",
-    "/Assets/Meme/cabeca1.png",
-    "/Assets/Meme/cabeca2.jpeg",
-  ])
-
+  const [choosed, setChoosed] = useState(false)
+  const [imagens] = useState([
+    '/Assets/Meme/02.jpg',
+    '/Assets/Meme/03.jpg',
+    '/Assets/Meme/04.jpg',
+    '/Assets/Meme/05.jpg',
+    '/Assets/Meme/06.jpg',
+    '/Assets/Meme/07.jpg',
+    '/Assets/Meme/08.jpg',
+    '/Assets/Meme/09.jpg',
+    '/Assets/Meme/10.jpg',
+    '/Assets/Meme/11.jpg',
+  ]);
   return (
     <Content>
-      <Text> Esses memes são Épicos. Escolha seu preferido </Text>
-      <MediaQuery maxDeviceWidth={700}>
-        <Fotos>
-          {
-            imgs.map(item => <Foto url={item} />)
-          }
-        </Fotos>
-      </MediaQuery>
-      <MediaQuery minDeviceWidth={1000}>
-        <Fotos>
-          {
-            imgs.map((item, index) => <Foto id={`${index}`} onClick={() => Local(item, index)} url={item} />)
-          }
-        </Fotos>
-      </MediaQuery>
-      <a href="/Setima" style={{ color: 'black' }}>
-        <Button>Próximo</Button>
-      </a>
+      <Desk imagens={imagens} setChoosed={setChoosed} />
+      {
+        choosed === true &&
+        <a href="/Oitava" style={{ color: 'black' }}>
+          <Button className="btn"> Escolhi </Button>
+        </a>
+      }
     </Content>
   )
 }

@@ -32,15 +32,8 @@ export default function TelaInicial() {
               </Button>
             </div>
           </Left>
-          <Right>
-            <MediaQuery maxDeviceWidth={700}>
-              <Loguinho />
-            </MediaQuery>
-            <Video
-              url="https://www.youtube.com/embed/xMHP6xzSxP8"
-              title="Video inicial"
-            />
-          </Right>
+
+          <Video />
           <PrimeiroJogo
             isOpen={isOpen}
             setOpen={setOpen}

@@ -1,24 +1,22 @@
 import styled from 'styled-components'
 
 export const Boddy = styled.div`
-  padding: 21vh;
+  padding: 20vh;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr .5fr;
+  grid-template-columns: 1fr 0.6fr;
   justify-content: center;  
   background-image: url('/Assets/Bg/Triangulo.svg'), 
                     url('/Assets/Bg/Bolinhas.svg'),
-                    url('/Assets/Bg/Molas.svg'),
+                    url('/Assets/Bg/Rectangle.svg'),
                     url('/Assets/Bg/BolinhaAzul.svg'),
-                    url('/Assets/Bg/BolinhaCinza.svg'),
-                    url('/Assets/Bg/Rectangle.svg');
+                    url('/Assets/Bg/BolinhaCinza.svg');
 
-  background-position: left 5vh top 15vh,
-                       right 3vh bottom 6vh,
+  background-position: right 90vh top 5vh,
+                       right 70vh bottom 30vh,
                        left 10vh bottom 2vh,
-                       right 90vh top 5vh,
-                       right 20vh top 4vh,
-                       left 80vh bottom 10vh;
+                       left 5vh top 9vh,
+                       right 10vh bottom 4vh;
               
   background-repeat: no-repeat;
 
@@ -39,22 +37,6 @@ export const Boddy = styled.div`
                        padding: 0px;
                        grid-template-columns: 1fr;
   }
-
-  @media (min-width: 1500px) {
-    background-image: url('/Assets/Bg/TrianguloBig.svg'), 
-                    url('/Assets/Bg/Bolinhas.svg'),
-                    url('/Assets/Bg/Molas.svg'),
-                    url('/Assets/Bg/BolinhaAzul.svg'),
-                    url('/Assets/Bg/BolinhaCinza.svg'),
-                    url('/Assets/Bg/Rectangle.svg');
-  
-  background-position: left 5vh top 15vh,
-                        right 3vh bottom 6vh,
-                        left 10vh bottom 2vh,
-                        right 90vh top 5vh,
-                        right 20vh top 4vh,
-                        left 80vh bottom 10vh;
-  }
   `;
 
 export const Left = styled.div`
@@ -70,9 +52,9 @@ export const Left = styled.div`
 `;
 
 export const Right = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: url(${props => props.url});
+  background-size: cover;
+  background-repeat: no-repeat;
 
   @media (max-width: 600px) {
     flex-direction: column;

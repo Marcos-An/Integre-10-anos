@@ -49,7 +49,7 @@ export const Content = styled.div`
 
 `;
 export const Body = styled.div`
-  padding: 25vh 20vh 4vh 20vh;
+  padding: 20vh 20vh 4vh 20vh;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

@@ -17,16 +17,36 @@ export const Button = styled.button`
 export const ButtonShare = styled.div`
   display: flex;
   align-items: center;
-  padding: 0px 25px;
+  padding: 7px 25px 7px 6px ;
   font-family: 'Muli', sans-serif;
   font-weight: 700;
   font-size: 17px;
   border: none;
-  background: #55EDD2;
+  margin-right: 5vh;
 
+  @media (max-width: 700px){
+    width: 166%;
+    margin-right: 0vh;
+  }
   @media (min-width: 1500px) {
-    padding: 15px 75px; 
-    font-size: 22px;
+  }
+`;
+
+export const ButtonShare2 = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 7px 0px;
+  font-family: 'Muli', sans-serif;
+  color: #3661CF;
+  font-weight: 700;
+  font-size: 17px;
+  border: none;
+
+  @media (max-width: 700px){
+    width: 166%;
+    margin-right: 0vh;
+  }
+  @media (min-width: 1500px) {
   }
 `;
 export const ButtonOrange = styled.button`

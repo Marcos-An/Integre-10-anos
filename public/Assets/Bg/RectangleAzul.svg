@@ -1,0 +1,19 @@
+<svg height="100" width="250" id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.23 1.51">
+<defs>
+    <style>
+        .cls-1{
+            fill:#5C7CB7;
+            animation: spin 4s infinite linear;
+            transform-origin: 50% 50%;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(17deg); }
+            50% {transform: rotate(0deg);} 
+            75% {transform: rotate(-17deg);} 
+            100% { transform: rotate(0deg); }
+        }
+    </style>
+</defs>
+<rect class="cls-1" width="48.23" height="1.51"/>
+</svg>

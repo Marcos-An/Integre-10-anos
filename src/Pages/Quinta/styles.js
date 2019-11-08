@@ -6,7 +6,7 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  padding: 12vh 20vh 4vh 20vh;
+  padding: 7vh 20vh 5vh 20vh;
 
   background-image: url('/Assets/Bg/Circulo.svg'),
                     url('/Assets/Bg/Triangulo.svg'),

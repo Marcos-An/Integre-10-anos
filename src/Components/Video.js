@@ -1,16 +1,19 @@
 import React from 'react'
+import ReactPlayer from 'react-player'
+import "./Video.css"
 
-export default function Video(props) {
+const Video = () => {
   return (
-    <iframe
-      style={{ height: '100%', width: '100%' }}
-      title={`${props.title}`}
-      className="Youtube"
-      src={`${props.url}`}
-      frameBorder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    >
-    </iframe>
+    <div className='player-wrapper'>
+      <ReactPlayer
+        url='https://vimeo.com/371970018'
+        className='react-player'
+        playing
+        width='100%'
+        height='100%'
+      />
+    </div>
   );
 }
+
+export default Video

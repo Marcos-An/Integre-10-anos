@@ -2,13 +2,13 @@ import styled from 'styled-components'
 
 export const Body = styled.div`
   background: url(${props => props.url});
-  padding: 12vh 20vh ;
+  padding: 7vh 20vh 0vh 20vh;
   @media (max-width: 700px){
     padding: 8vh 20vh ;
   }
   `;
 export const Content = styled.div`
-  height: 100vh;
+  height: 93vh;
   display: flex;
   text-align: center;
   align-items: center;

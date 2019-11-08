@@ -1,75 +1,47 @@
 import styled from 'styled-components'
 
-export const Boddy = styled.div`
-  padding: 20vh;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 0.7fr;
-  justify-content: center;
-
-  @media (max-width: 600px) {
-    padding: 0px;
-    grid-template-columns: 1fr;
+export const Body = styled.div`
+  background: url(${props => props.url});
+  padding: 7vh 20vh 0vh 20vh;
+  @media (max-width: 700px){
+    padding: 8vh 20vh ;
   }
-`;
-
-export const Meme = styled.div`
-  height: 300px;
-  width: 300px;
-  background-image: url("${(props) => props.url}");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-`;
-
-export const Left = styled.div`
-  display: inline-block;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
-
-  @media (max-width: 600px) {
-    padding: 25px;
-    text-align: center;
-    justify-content: center;
-  }
-`;
-
-export const Right = styled.div`
+  `;
+export const Content = styled.div`
+  height: 93vh;
   display: flex;
+  text-align: center;
   align-items: center;
-  justify-content: center;
-`;
+  flex-direction: column;
 
-export const Title = styled.h1`
-  color: #000;
-  width: 85%;
-  font-size: 48px;
-  margin: 0px;
-  word-break: break-all;
+  .video{
+    justify-self: flex-start;
+    align-self: flex-start;
+  }
 
-  @media (max-width: 600px) {
-    width: 100%;
-    font-size: 28px;
-  }
-  @media (min-width: 1500px) {
-    font-size: 65px;
-  }
-`;
-export const SubTitle = styled.h2`
-  color: #808080;
-  width: 60%;
-  margin-bottom: 50px;
-
-  @media (max-width: 600px) {
-    padding-top: 10px;
-    width: 100%;
-    font-size: 15px;
-    grid-template-columns: 1fr;
-  }
-  @media (min-width: 1500px) {
-    padding-top: 10px;
-    font-size: 25px;
+  @media (max-width: 700px){
+    text-align: center;
+    padding: 0px 10px 50px 10px;
   }
 `;
 
+export const VideoContent = styled.div`
+  margin-top: 5vh;
+  height: 50vh; 
+  width: 50vw;
+
+  @media (max-width: 700px){
+    width: 100vw;
+  }
+`;
+
+export const Text = styled.h3`
+  color: #5C5C5C;
+  font-family: 'Muli', sans-serif;
+  margin: 20px 0px 30px 0px;
+  width: 50vw;
+  
+  @media (max-width: 700px){
+    width: 80vw;
+  }
+`;
