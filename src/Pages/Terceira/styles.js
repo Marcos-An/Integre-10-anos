@@ -3,12 +3,14 @@ import styled from 'styled-components'
 export const Body = styled.div`
   background: url(${props => props.url});
   padding: 7vh 20vh 0vh 20vh;
+
   @media (max-width: 700px){
     padding: 8vh 20vh ;
   }
-  `;
+`;
+
 export const Content = styled.div`
-  height: 93vh;
+  height: 100vh;
   display: flex;
   text-align: center;
   align-items: center;
@@ -27,9 +29,7 @@ export const Content = styled.div`
 
 export const VideoContent = styled.div`
   margin-top: 5vh;
-  height: 50vh; 
-  width: 50vw;
-
+  
   @media (max-width: 700px){
     width: 100vw;
   }

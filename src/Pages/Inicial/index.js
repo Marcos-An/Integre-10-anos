@@ -32,7 +32,6 @@ export default function TelaInicial() {
               </Button>
             </div>
           </Left>
-
           <Video />
           <PrimeiroJogo
             isOpen={isOpen}

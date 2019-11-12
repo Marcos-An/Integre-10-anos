@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const Boddy = styled.div`
-  padding: 21vh;
+  padding: 20vh;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr .5fr;
+  grid-template-columns: 1fr .6fr;
   justify-content: center;  
   background-image: url('/Assets/Bg/Triangulo.svg'), 
                     url('/Assets/Bg/Bolinhas.svg'),
@@ -76,7 +76,6 @@ export const Right = styled.div`
 
   @media (max-width: 600px) {
     flex-direction: column;
-    height: 486px;
   }
   @media (min-width: 1500px) {
     padding: 4px 0px !important;

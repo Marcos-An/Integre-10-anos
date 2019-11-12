@@ -22,10 +22,7 @@ export default function SegundaTela() {
           <div>
             <Loguinho />
           </div>
-          <Video
-            url="https://www.youtube.com/embed/_xKCwzgI68s"
-            title="Video inicial"
-          />
+          <Video/>
         </Left>
         <Center>
           <img src="/Assets/Bg/MolasCenter.svg" alt="" />
@@ -36,7 +33,9 @@ export default function SegundaTela() {
           </Text>
           <JogoDaVelha isOpen={isOpen} setOpen={setOpen} url={"/Terceira"}/>
         </Center>
-        <Right url="/Assets/Bg/bg2.png" />
+        <Right>
+            < img src="/Assets/Bg/bg2.png" alt=""/>
+          </Right>
         <Button className="btn" onClick={() => setOpen(!isOpen)}> Próximo jogo </Button>
       </Body>
       <Button className="btn1" onClick={() => setOpen(!isOpen)}> Próximo jogo </Button>

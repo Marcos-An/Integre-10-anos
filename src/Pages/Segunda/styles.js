@@ -2,10 +2,6 @@ import styled from 'styled-components'
 
 export const Content = styled.div`
   display: flex;
-  height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
   background-image: url('/Assets/Bg/Triangulo.svg'),
                     url('/Assets/Bg/TrianguloCinza.svg'),
                     url('/Assets/Bg/BolinhaAzul.svg');
@@ -49,8 +45,7 @@ export const Content = styled.div`
 
 `;
 export const Body = styled.div`
-  padding: 20vh 20vh 4vh 20vh;
-  height: 100vh;
+  padding: 7vh 20vh 4vh 20vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 50px;
@@ -74,15 +69,18 @@ export const Left = styled.div`
   height: 100%;
 
   div {
-    margin: -13vh 0vh 5vh 0vh;
+    margin-bottom: 5vh;
   }
+
   @media (max-width: 700px) {
     flex-direction: column;
     align-items: center;
     grid-row-start: 1;
-    height: 80vh;
+    height: 65vh;
+
     div {
-      margin: 4vh 0vh 2vh 0vh;
+      margin-top: 5vh;
+      margin-bottom: -10vh;
     }
   }
 `;
@@ -126,15 +124,19 @@ export const Right = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
-  background: url(${props => props.url});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  @media (max-width: 700px){
-    height: 60vh;
-    width: 100%;
-  }
+  
+    img {
+      height: 57vh;
+      width: 100%;
+      margin-top: 5vh;
+    }
+    
+    @media (max-width: 700px){
+      width: 100%;
+      img {
+        height: 43vh;
+        width: 100%;
+        margin-top: 5vh;
+      }
+    }
 `;
