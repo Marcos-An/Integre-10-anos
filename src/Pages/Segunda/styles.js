@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const Content = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: url('/Assets/Bg/Triangulo.svg'),
                     url('/Assets/Bg/TrianguloCinza.svg'),
                     url('/Assets/Bg/BolinhaAzul.svg');
@@ -22,11 +24,11 @@ export const Content = styled.div`
     @media (max-width: 700px){
       display: flex;
       justify-self: center;
-      margin: 30px;
+      margin-bottom: 5vh;
     }
   }
   .btn1{
-    margin: 20px 0px 40px 0px;
+    margin: 10px 0px 40px 0px;
 
     @media (max-width: 700px){
       display: none;
@@ -48,27 +50,24 @@ export const Body = styled.div`
   padding: 7vh 20vh 4vh 20vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 50px;
-  align-items: center;
+  grid-gap: 30px;
+  align-items: flex-end;
 
   @media (max-width: 700px){
-    grid-gap: 30px;
+    grid-gap: 0px;
     grid-template-columns: 1fr;
     padding: 0px;
-    height: 50vh;
   }
   @media (min-width: 1500px){
     grid-gap: 30px;
-    height: 99vh;
   }
 `;
 
 export const Left = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
 
-  div {
+  .Logo {
     margin-bottom: 5vh;
   }
 
@@ -76,17 +75,16 @@ export const Left = styled.div`
     flex-direction: column;
     align-items: center;
     grid-row-start: 1;
-    height: 65vh;
-
-    div {
+    height: 80vh;    
+    .Logo {
       margin-top: 5vh;
-      margin-bottom: -10vh;
     }
   }
 `;
 
 export const Center = styled.div`
   display: flex;
+  align-self: center;
   flex-direction: column;
   align-items: center;
 
@@ -100,6 +98,8 @@ export const Center = styled.div`
     }
     @media (max-width: 700px) {
       display: none;
+      margin: 0;
+      
     }
   }
 `;
@@ -121,22 +121,18 @@ export const Text = styled.h2`
 `;
 
 export const Right = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   
     img {
-      height: 57vh;
-      width: 100%;
-      margin-top: 5vh;
+      bottom: 0px;
+      height: 60vh;
     }
     
     @media (max-width: 700px){
       width: 100%;
       img {
-        height: 43vh;
         width: 100%;
         margin-top: 5vh;
+        margin-bottom: 5vh;
       }
     }
 `;

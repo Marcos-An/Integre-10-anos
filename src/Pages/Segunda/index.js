@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Video from '../../Components/Video'
+import Video from '../../Components/Videos/SegundoVideo'
 import Loguinho from '../../Components/Loguinho'
 import JogoDaVelha from '../../Components/JogoDaVelha'
 import { Button } from '../../Components/Buttons/ButtonPrincipal'
@@ -19,10 +19,10 @@ export default function SegundaTela() {
     <Content>
       <Body>
         <Left>
-          <div>
+          <div className="Logo">
             <Loguinho />
           </div>
-          <Video/>
+          <Video />
         </Left>
         <Center>
           <img src="/Assets/Bg/MolasCenter.svg" alt="" />
@@ -31,11 +31,11 @@ export default function SegundaTela() {
             e superações, mas acima de tudo, muita dedicação e
             pioneirismo na área digital”
           </Text>
-          <JogoDaVelha isOpen={isOpen} setOpen={setOpen} url={"/Terceira"}/>
+          <JogoDaVelha isOpen={isOpen} setOpen={setOpen} url={"/Terceira"} />
         </Center>
         <Right>
-            < img src="/Assets/Bg/bg2.png" alt=""/>
-          </Right>
+          < img src="/Assets/Bg/bg2.png" alt="" />
+        </Right>
         <Button className="btn" onClick={() => setOpen(!isOpen)}> Próximo jogo </Button>
       </Body>
       <Button className="btn1" onClick={() => setOpen(!isOpen)}> Próximo jogo </Button>

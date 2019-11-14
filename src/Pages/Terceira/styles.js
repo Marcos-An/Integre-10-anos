@@ -23,13 +23,12 @@ export const Content = styled.div`
 
   @media (max-width: 700px){
     text-align: center;
-    padding: 0px 10px 50px 10px;
   }
 `;
 
 export const VideoContent = styled.div`
   margin-top: 5vh;
-  
+
   @media (max-width: 700px){
     width: 100vw;
   }

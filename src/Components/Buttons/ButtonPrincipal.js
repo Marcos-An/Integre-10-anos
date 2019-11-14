@@ -25,8 +25,8 @@ export const ButtonShare = styled.div`
   margin-right: 5vh;
 
   @media (max-width: 700px){
-    width: 166%;
     margin-right: 0vh;
+    padding: 7px 0px 7px 6px ;
   }
   @media (min-width: 1500px) {
   }
@@ -43,8 +43,8 @@ export const ButtonShare2 = styled.div`
   border: none;
 
   @media (max-width: 700px){
-    width: 166%;
     margin-right: 0vh;
+    padding:  0px;
   }
   @media (min-width: 1500px) {
   }

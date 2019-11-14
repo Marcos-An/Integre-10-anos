@@ -33,7 +33,6 @@ export default function CompartilharVideo(props) {
           <WhatsappShareButton
             onShareWindowClose={() => props.setCompartilhado(true)}
             url={shareUrl}
-            style={{ marginRight: "3vh" }}
           >
             <WhatsappIcon size={40} round={true} />
           </WhatsappShareButton>

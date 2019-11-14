@@ -40,16 +40,17 @@ export default function TelaInicial() {
 
       <MediaQuery maxDeviceWidth={700}>
         <Boddy>
+          <div style={{ display: 'flex', justifyContent: 'center', margin: '5vh' }}>
+            <Loguinho className="Logo" />
+          </div>
+          <Right url={`${url}`} />
           <Left>
-            <Loguinho className="Loguinho" />
             <Title>Obrigada!</Title>
             <SubTitle>Agora você também faz parte da nossa história!</SubTitle>
-          </Left>
-          <Right url={`${url}`}>
             <Button style={{ margin: 30 }}>
               Começar!
             </Button>
-          </Right>
+          </Left>
         </Boddy>
       </MediaQuery>
     </>

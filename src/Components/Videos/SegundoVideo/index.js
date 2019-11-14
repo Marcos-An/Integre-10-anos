@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+
 export default class ResponsivePlayer extends Component {
   render() {
     return (
       <>
-        <div style={{ padding: "100.0% 50% 0 ", position: "relative" }}>
+        <div style={{ padding: "100.0% 29vh 0 ", position: "relative" }}>
           <div style={{ height: '100%', left: '0', position: 'absolute', top: '0', width: '100%' }}>
             <iframe
               src="https://fast.wistia.net/embed/iframe/qsj2i8nsau?seo=false&videoFoam=true"
@@ -11,8 +12,6 @@ export default class ResponsivePlayer extends Component {
               allowtransparency="true"
               frameborder="0"
               scrolling="no"
-              class="wistia_embed"
-              name="wistia_embed"
               allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen
               width="100%"
               height="100%">

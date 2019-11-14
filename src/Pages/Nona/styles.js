@@ -19,7 +19,6 @@ export const Boddy = styled.div`
                        right 10vh bottom 4vh;
               
   background-repeat: no-repeat;
-
   
   @media (max-width: 700px) {
     background-image: url('/Assets/Bg/TrianguloMb.svg'), 
@@ -28,16 +27,16 @@ export const Boddy = styled.div`
                       url('/Assets/Bg/BolinhaCinza.svg'),
                       url('/Assets/Bg/Rectangle.svg');
 
-  background-position: right 0px top 10px,
-                       right 60px bottom 40px,
-                       left 20px top 70px,
-                       right 30px top 230px,
-                       left 700px bottom 200px;
-                       height: 100%;
-                       padding: 0px;
-                       grid-template-columns: 1fr;
+    background-position: right 0px top 10px,
+                        left -10vh bottom 30vh,
+                        left 20px top 70px,
+                        right 30px top 230px,
+                        left 700px bottom 200px;
+    height: 100%;
+    padding: 0px;
+    grid-template-columns: 1fr;
   }
-  `;
+`;
 
 export const Left = styled.div`
   display: flex;
@@ -57,8 +56,7 @@ export const Right = styled.div`
   background-repeat: no-repeat;
 
   @media (max-width: 600px) {
-    flex-direction: column;
-    height: 486px;
+    height: 350px;
   }
   @media (min-width: 1500px) {
     padding: 4px 0px !important;

@@ -20,8 +20,6 @@ export const Content = styled.div`
   }
 
   @media (max-width: 700px){
-    justify-content: flex-start;
-    align-items: flex-start;
     padding: 8vh 0vh 0vh 0vh;
     .btn{
       margin: 20px 0px;

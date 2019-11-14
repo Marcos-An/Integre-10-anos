@@ -26,22 +26,11 @@ export const Content = styled.div`
 `;
 
 export const VideoContent = styled.div`
-  margin-top: 5vh;
-  height: 50vh; 
+  margin: 5vh;
   width: 50vw;
 
   @media (max-width: 700px){
     width: 100vw;
-  }
-`;
-
-export const Text = styled.h3`
-  color: #5C5C5C;
-  font-family: 'Muli', sans-serif;
-  margin: 20px 0px 30px 0px;
-  width: 50vw;
-  
-  @media (max-width: 700px){
-    width: 80vw;
+    height: 36vh; 
   }
 `;

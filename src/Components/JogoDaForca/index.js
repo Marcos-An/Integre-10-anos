@@ -159,106 +159,169 @@ export default class JogoDaForca extends Component {
     const { isOpen, setOpen } = this.props
 
     return (
-      <Modals
-        title="Qual é a palavra?"
-        isOpen={isOpen}
-        onCancel={() => setOpen(!isOpen)}
-        footer={null}
-        width={'97vw'}
-      >
-        <MedaiQuery minWidth={1000}>
-          {
-            this.state.segredo === this.state.sorteada ? (
-              <Acertou>
-                <h1>Você é bom mesmo hein!</h1>
-                <a href="/Quarta" style={{ color: 'black' }}>
-                  <Button> Veja o próximo conteúdo</Button>
-                </a>
-              </Acertou>
-            ) : (
-                <Content>
-                  <div>
-                    <Forca height={350} erros={this.state.erros} />
-                    <Dica data={this.state.data} index={this.state.index} />
-                  </div>
-                  <PalavraBox>
-                    <LetraErrada>
+      <>
+        <MedaiQuery minWidth={800} maxDeviceWidth={1499}>
+          <Modals
+            title="Qual é a palavra?"
+            isOpen={isOpen}
+            onCancel={() => setOpen(!isOpen)}
+            footer={null}
+            width={'70vw'}
+          >
+            {
+              this.state.segredo === this.state.sorteada ? (
+                <Acertou>
+                  <h1>Você é bom mesmo hein!</h1>
+                  <a href="/Quarta" style={{ color: 'black' }}>
+                    <Button> Veja o próximo conteúdo</Button>
+                  </a>
+                </Acertou>
+              ) : (
+                  <Content>
+                    <div>
+                      <Forca height={350} erros={this.state.erros} />
+                      <Dica data={this.state.data} index={this.state.index} />
+                    </div>
+                    <PalavraBox>
+                      <LetraErrada>
+                        {
+                          this.state.letrasErradasArray.map((item, index) => (
+                            <Erradas key={index}>
+                              {`${item}`}
+                            </Erradas>
+                          ))
+                        }
+                      </LetraErrada>
+                      <Palavra>
+                        {
+                          this.state.sorteadaLetras.map((item, index) => (
+                            <Letra key={index}>
+                              {`${item}`}
+                            </Letra>
+                          ))
+                        }
+                      </Palavra>
                       {
-                        this.state.letrasErradasArray.map((item, index) => (
-                          <Erradas key={index}>
-                            {`${item}`}
-                          </Erradas>
-                        ))
+                        this.state.erros === 6 ? (
+                          this.showConfirm()
+                        ) : null
                       }
-                    </LetraErrada>
-                    <Palavra>
+                      <Buttons handle={this.handleEvent} />
+                    </PalavraBox>
+                  </Content >
+                )
+            }
+          </Modals>
+        </MedaiQuery>
+
+        <MedaiQuery minWidth={1500}>
+          <Modals
+            title="Qual é a palavra?"
+            isOpen={isOpen}
+            onCancel={() => setOpen(!isOpen)}
+            footer={null}
+            width={'65vw'}
+          >
+            {
+              this.state.segredo === this.state.sorteada ? (
+                <Acertou>
+                  <h1>Você é bom mesmo hein!</h1>
+                  <a href="/Quarta" style={{ color: 'black' }}>
+                    <Button> Veja o próximo conteúdo</Button>
+                  </a>
+                </Acertou>
+              ) : (
+                  <Content>
+                    <div>
+                      <Forca height={350} erros={this.state.erros} />
+                      <Dica data={this.state.data} index={this.state.index} />
+                    </div>
+                    <PalavraBox>
+                      <LetraErrada>
+                        {
+                          this.state.letrasErradasArray.map((item, index) => (
+                            <Erradas key={index}>
+                              {`${item}`}
+                            </Erradas>
+                          ))
+                        }
+                      </LetraErrada>
+                      <Palavra>
+                        {
+                          this.state.sorteadaLetras.map((item, index) => (
+                            <Letra key={index}>
+                              {`${item}`}
+                            </Letra>
+                          ))
+                        }
+                      </Palavra>
                       {
-                        this.state.sorteadaLetras.map((item, index) => (
-                          <Letra key={index}>
-                            {`${item}`}
-                          </Letra>
-                        ))
+                        this.state.erros === 6 ? (
+                          this.showConfirm()
+                        ) : null
                       }
-                    </Palavra>
-                    {
-                      this.state.erros === 6 ? (
-                        this.showConfirm()
-                      ) : null
-                    }
-                    <Buttons handle={this.handleEvent} />
-                  </PalavraBox>
-                </Content >
-              )
-          }
+                      <Buttons handle={this.handleEvent} />
+                    </PalavraBox>
+                  </Content >
+                )
+            }
+          </Modals>
         </MedaiQuery>
 
         <MedaiQuery maxWidth={700}>
-          {
-            this.state.segredo === this.state.sorteada ? (
-              <Acertou>
-                <h1>Você é bom mesmo hein!</h1>
-                <Button> Veja o próximo conteúdo </Button>
-              </Acertou>
-            ) : (
-                <Content>
-                  <Top>
-                    <Forca height={230} erros={this.state.erros} />
-                    <LetraErrada>
+          <Modals
+            title="Qual é a palavra?"
+            isOpen={isOpen}
+            onCancel={() => setOpen(!isOpen)}
+            footer={null}
+            width={'100vw'}
+          >
+            {
+              this.state.segredo === this.state.sorteada ? (
+                <Acertou>
+                  <h1>Você é bom mesmo hein!</h1>
+                  <Button> Veja o próximo conteúdo </Button>
+                </Acertou>
+              ) : (
+                  <Content>
+                    <Top>
+                      <Forca height={230} erros={this.state.erros} />
+                      <LetraErrada>
+                        {
+                          this.state.letrasErradasArray.map((item, index) => (
+                            <Erradas key={index}>
+                              {`${item}`}
+                            </Erradas>
+                          ))
+                        }
+                      </LetraErrada>
+                    </Top>
+                    <PalavraBox>
+                      <Dica data={this.state.data} index={this.state.index} />
+                      <Palavra>
+                        {
+                          this.state.sorteadaLetras.map((item, index) => (
+                            <Letra key={index}>
+                              {`${item}`}
+                            </Letra>
+                          ))
+                        }
+                      </Palavra>
                       {
-                        this.state.letrasErradasArray.map((item, index) => (
-                          <Erradas key={index}>
-                            {`${item}`}
-                          </Erradas>
-                        ))
+                        this.state.erros > 6 ? (
+                          setTimeout(() => {
+                            this.showConfirm()
+                          }, 100)
+                        ) : null
                       }
-                    </LetraErrada>
-                  </Top>
-                  <PalavraBox>
-                    <Dica data={this.state.data} index={this.state.index} />
-                    <Palavra>
-                      {
-                        this.state.sorteadaLetras.map((item, index) => (
-                          <Letra key={index}>
-                            {`${item}`}
-                          </Letra>
-                        ))
-                      }
-                    </Palavra>
-                    {
-                      this.state.erros > 6 ? (
-                        setTimeout(() => {
-                          this.showConfirm()
-                        }, 100)
-                      ) : null
-                    }
-                    <ButtonsMobile handle={this.handleEvent} />
-                  </PalavraBox>
-                </Content >
-              )
-          }
+                      <ButtonsMobile handle={this.handleEvent} />
+                    </PalavraBox>
+                  </Content >
+                )
+            }
+          </Modals>
         </MedaiQuery>
-
-      </Modals>
+      </>
     )
   }
 }

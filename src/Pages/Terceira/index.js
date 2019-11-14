@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Content, VideoContent, Text, Body } from './styles'
-import Video from '../../Components/Video'
+import Video from '../../Components/Videos/QuartoVideo'
 import CompartilharVideo from '../../Components/CompartilharVideo'
 import VideoComparilhado from '../../Components/CompartilharVideo/Compartilhada'
 import { Button } from '../../Components/Buttons/ButtonPrincipal'
@@ -17,10 +17,7 @@ export default function Quarta() {
       <Content>
         <Loguinho />
         <VideoContent>
-          <Video
-            url="https://www.youtube.com/embed/xMHP6xzSxP8"
-            title="Video inicial"
-          />
+          <Video />
         </VideoContent>
         {
           compartilhar === false ? (

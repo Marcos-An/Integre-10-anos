@@ -4,7 +4,7 @@ export const Content = styled.div`
   display: grid;
   grid-template-columns: 0.6fr 1.4fr;
   justify-items: center;
-  align-items: flex-start;
+  align-items: center;
   height: 78vh;
 
   @media (max-width: 700px){
@@ -50,13 +50,13 @@ export const LetraErrada = styled.div`
 
 export const Letra = styled.div`
   display: inline-block;
-  width: 25px;
+  width: 50px;
   height: 50px;
   border-bottom:2px solid gray;
   margin-right: 20px;
   text-align: center;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 35px;
   text-transform: uppercase;
 
   @media(max-width: 700px){

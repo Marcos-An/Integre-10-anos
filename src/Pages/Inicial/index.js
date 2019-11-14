@@ -9,7 +9,7 @@ import {
 import MediaQuery from 'react-responsive'
 import Loguinho from '../../Components/Loguinho'
 import { Button } from '../../Components/Buttons/ButtonPrincipal';
-import Video from '../../Components/Video'
+import Video from '../../Components/Videos/PrimeiroVideo'
 import PrimeiroJogo from '../../Components/JogoSubtracao'
 
 export default function TelaInicial() {
