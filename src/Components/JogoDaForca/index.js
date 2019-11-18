@@ -110,7 +110,7 @@ export default class JogoDaForca extends Component {
   }
   showConfirm() {
     confirm({
-      title: 'O Matheus morreu',
+      title: 'O Marcos morreu',
       content: 'Gostaria de tentar novamente?',
       okText: 'Sim',
       cancelText: 'Cancelar',
@@ -168,49 +168,53 @@ export default class JogoDaForca extends Component {
             footer={null}
             width={'80vw'}
           >
-            {
-              this.state.segredo === this.state.sorteada ? (
-                <Acertou>
-                  <h1>Você é bom mesmo hein!</h1>
-                  <a href="/Quarta" style={{ color: 'black' }}>
-                    <Button> Veja o próximo conteúdo</Button>
-                  </a>
-                </Acertou>
-              ) : (
-                  <Content>
-                    <div>
-                      <Forca height={450} erros={this.state.erros} />
-                    </div>
-                    <PalavraBox>
-                      <LetraErrada>
-                        {
-                          this.state.letrasErradasArray.map((item, index) => (
-                            <Erradas key={index}>
-                              {`${item}`}
-                            </Erradas>
-                          ))
-                        }
-                      </LetraErrada>
-                      <Palavra>
-                        {
-                          this.state.sorteadaLetras.map((item, index) => (
-                            <Letra key={index}>
-                              {`${item}`}
-                            </Letra>
-                          ))
-                        }
-                      </Palavra>
-                      {
-                        this.state.erros === 6 ? (
-                          this.showConfirm()
-                          ) : null
-                        }
-                      <Buttons handle={this.handleEvent} />
-                      <Dica data={this.state.data} index={this.state.index} />
-                    </PalavraBox>
-                  </Content >
-                )
-            }
+
+            <Content>
+              <div>
+                <Forca height={500} erros={this.state.erros} />
+              </div>
+              <PalavraBox>
+                <LetraErrada>
+                  {
+                    this.state.letrasErradasArray.map((item, index) => (
+                      <Erradas key={index}>
+                        {`${item}`}
+                      </Erradas>
+                    ))
+                  }
+                </LetraErrada>
+                <Palavra>
+                  {
+                    this.state.sorteadaLetras.map((item, index) => (
+                      <Letra key={index}>
+                        {`${item}`}
+                      </Letra>
+                    ))
+                  }
+                </Palavra>
+                {
+                  this.state.erros === 8 ? (
+                    this.showConfirm()
+                  ) : null
+                }
+                {
+                  this.state.segredo === this.state.sorteada ? (
+                    <Acertou>
+                      <img src="/Assets/correct.png" alt="" />
+                      <a href="/Quarta" style={{ color: 'black', marginTop: '4vh' }}>
+                        <Button> Veja o próximo conteúdo</Button>
+                      </a>
+                    </Acertou>
+
+                  ) : (
+                      <>
+                        <Buttons handle={this.handleEvent} />
+                        <Dica data={this.state.data} index={this.state.index} />
+                      </>
+                    )
+                }
+              </PalavraBox>
+            </Content >
           </Modals>
         </MedaiQuery>
 
@@ -222,49 +226,52 @@ export default class JogoDaForca extends Component {
             footer={null}
             width={'65vw'}
           >
-            {
-              this.state.segredo === this.state.sorteada ? (
-                <Acertou>
-                  <h1>Você é bom mesmo hein!</h1>
-                  <a href="/Quarta" style={{ color: 'black' }}>
-                    <Button> Veja o próximo conteúdo</Button>
-                  </a>
-                </Acertou>
-              ) : (
-                  <Content>
-                    <div>
-                      <Forca height={450} erros={this.state.erros} />
-                      <Dica data={this.state.data} index={this.state.index} />
-                    </div>
-                    <PalavraBox>
-                      <LetraErrada>
-                        {
-                          this.state.letrasErradasArray.map((item, index) => (
-                            <Erradas key={index}>
-                              {`${item}`}
-                            </Erradas>
-                          ))
-                        }
-                      </LetraErrada>
-                      <Palavra>
-                        {
-                          this.state.sorteadaLetras.map((item, index) => (
-                            <Letra key={index}>
-                              {`${item}`}
-                            </Letra>
-                          ))
-                        }
-                      </Palavra>
-                      {
-                        this.state.erros === 6 ? (
-                          this.showConfirm()
-                        ) : null
-                      }
-                      <Buttons handle={this.handleEvent} />
-                    </PalavraBox>
-                  </Content >
-                )
-            }
+            <Content>
+              <div>
+                <Forca height={500} erros={this.state.erros} />
+              </div>
+              <PalavraBox>
+                <LetraErrada>
+                  {
+                    this.state.letrasErradasArray.map((item, index) => (
+                      <Erradas key={index}>
+                        {`${item}`}
+                      </Erradas>
+                    ))
+                  }
+                </LetraErrada>
+                <Palavra>
+                  {
+                    this.state.sorteadaLetras.map((item, index) => (
+                      <Letra key={index}>
+                        {`${item}`}
+                      </Letra>
+                    ))
+                  }
+                </Palavra>
+                {
+                  this.state.erros === 8 ? (
+                    this.showConfirm()
+                  ) : null
+                }
+                {
+                  this.state.segredo === this.state.sorteada ? (
+                    <Acertou>
+                      <img src="/Assets/correct.png" alt="" />
+                      <a href="/Quarta" style={{ color: 'black', marginTop: '4vh' }}>
+                        <Button> Veja o próximo conteúdo</Button>
+                      </a>
+                    </Acertou>
+
+                  ) : (
+                      <>
+                        <Buttons handle={this.handleEvent} />
+                        <Dica data={this.state.data} index={this.state.index} />
+                      </>
+                    )
+                }
+              </PalavraBox>
+            </Content >
           </Modals>
         </MedaiQuery>
 
@@ -276,49 +283,53 @@ export default class JogoDaForca extends Component {
             footer={null}
             width={'100vw'}
           >
-            {
-              this.state.segredo === this.state.sorteada ? (
-                <Acertou>
-                  <h1>Você é bom mesmo hein!</h1>
-                  <Button> Veja o próximo conteúdo </Button>
-                </Acertou>
-              ) : (
-                  <Content>
-                    <Top>
-                      <Forca height={230} erros={this.state.erros} />
-                      <LetraErrada>
-                        {
-                          this.state.letrasErradasArray.map((item, index) => (
-                            <Erradas key={index}>
-                              {`${item}`}
-                            </Erradas>
-                          ))
-                        }
-                      </LetraErrada>
-                    </Top>
-                    <PalavraBox>
-                      <Dica data={this.state.data} index={this.state.index} />
-                      <Palavra>
-                        {
-                          this.state.sorteadaLetras.map((item, index) => (
-                            <Letra key={index}>
-                              {`${item}`}
-                            </Letra>
-                          ))
-                        }
-                      </Palavra>
-                      {
-                        this.state.erros > 6 ? (
-                          setTimeout(() => {
-                            this.showConfirm()
-                          }, 100)
-                        ) : null
-                      }
+
+            <Content>
+              <Top>
+                <Forca height={230} erros={this.state.erros} />
+                <LetraErrada>
+                  {
+                    this.state.letrasErradasArray.map((item, index) => (
+                      <Erradas key={index}>
+                        {`${item}`}
+                      </Erradas>
+                    ))
+                  }
+                </LetraErrada>
+              </Top>
+              <PalavraBox>
+                {this.state.segredo !== this.state.sorteada ? (
+                  <Dica data={this.state.data} index={this.state.index} />
+                ) : null}
+                <Palavra>
+                  {
+                    this.state.sorteadaLetras.map((item, index) => (
+                      <Letra key={index}>
+                        {`${item}`}
+                      </Letra>
+                    ))
+                  }
+                </Palavra>
+                {
+                  this.state.erros === 6 ? (
+                    this.showConfirm()
+                  ) : null
+                }
+                {
+                  this.state.segredo === this.state.sorteada ? (
+                    <Acertou>
+                      <img src="/Assets/correct.png" alt="" />
+                      <a href="/Quarta" style={{ color: 'black', marginTop: '4vh' }}>
+                        <Button style={{ padding: '10px 50px' }}> Veja o próximo conteúdo</Button>
+                      </a>
+                    </Acertou>
+
+                  ) : (
                       <ButtonsMobile handle={this.handleEvent} />
-                    </PalavraBox>
-                  </Content >
-                )
-            }
+                    )
+                }
+              </PalavraBox>
+            </Content >
           </Modals>
         </MedaiQuery>
       </>

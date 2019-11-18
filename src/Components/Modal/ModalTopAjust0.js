@@ -8,6 +8,7 @@ export default function Modals(props) {
       title={props.title}
       visible={props.isOpen}
       onCancel={props.onCancel}
+      bodyStyle={{ padding: 10 }}
       footer={null}
       width={props.width}
     >

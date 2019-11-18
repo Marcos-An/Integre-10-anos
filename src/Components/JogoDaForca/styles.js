@@ -61,6 +61,8 @@ export const Letra = styled.div`
 
   @media(max-width: 700px){
     height: 40px;
+    width: 30px;
+    font-size: 28px;
     margin-right: 10px;
   }
 `;
@@ -165,6 +167,7 @@ export const Dica = styled.div`
     margin-top: -60px;
     margin: 15px 0px ;
     font-size: 18px;
+    padding-left: 0px;
     justify-content: center;
   }
 `;
@@ -178,12 +181,16 @@ export const Text = styled.h5`
 `;
 
 export const Acertou = styled.div`
-  height: 78vh;
+  margin: 8vh 0vh;
+  height: 35vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   h1{
     margin-bottom: 40px;
+  }
+  @media (max-width: 700px){
+    height: 18vh;
   }
 `;
