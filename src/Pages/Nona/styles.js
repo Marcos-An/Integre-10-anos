@@ -11,12 +11,12 @@ export const Boddy = styled.div`
                     url('/Assets/Bg/Rectangle.svg'),
                     url('/Assets/Bg/BolinhaAzul.svg'),
                     url('/Assets/Bg/BolinhaCinza.svg');
-
-  background-position: right 90vh top 5vh,
-                       right 70vh bottom 30vh,
-                       left 10vh bottom 2vh,
-                       left 5vh top 9vh,
-                       right 10vh bottom 4vh;
+                    
+    background-position: right 20vh top 5vh,
+                         right 0vh bottom 2vh,
+                         left 10vh bottom 2vh,
+                         left 5vh top 5vh,
+                         right 115vh bottom 10vh;
               
   background-repeat: no-repeat;
   
@@ -36,6 +36,15 @@ export const Boddy = styled.div`
     padding: 0px;
     grid-template-columns: 1fr;
   }
+  
+  @media (min-width: 1500px) {
+    padding: 20vh 40vh 20vh 20vh;
+        background-position: right 20vh top 5vh,
+                         right 27vh bottom 8vh,
+                         left 10vh bottom 2vh,
+                         left 15vh top 15vh,
+                         right 115vh bottom 10vh;
+  }
 `;
 
 export const Left = styled.div`
@@ -47,6 +56,9 @@ export const Left = styled.div`
     padding: 25px;
     text-align: center;
     justify-content: center;
+  }
+  @media (min-width: 1500px) {
+    margin-left: 20vh;
   }
 `;
 
@@ -86,7 +98,7 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h2`
   color: #4B4949;
-  width: 40%;
+  width: 50%;
   font-weight: 300;
   font-family: 'Muli', sans-serif;
   word-break: break-word;
@@ -105,5 +117,6 @@ export const SubTitle = styled.h2`
   @media (min-width: 1500px) {
     padding-top: 10px;
     font-size: 25px;
+    width: 65%;
   }
 `;
