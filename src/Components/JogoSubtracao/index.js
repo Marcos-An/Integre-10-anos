@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Modal from '../Modal/Modal'
 import { InputNumber } from 'antd'
 import { Button } from '../../Components/Buttons/ButtonPrincipal'
@@ -12,6 +12,15 @@ import {
 export default function Modals(props) {
   const [Resposta, setResposta] = useState('')
 
+  useEffect(() => {
+    document.addEventListener('keypress', checkEvent.bind(this))
+  });
+
+  const checkEvent = (e) => {
+    if (e.keyCode === 13) {
+      handleChange();
+    }
+  }
   const handleChange = () => {
     setResposta(props.result);
   }
