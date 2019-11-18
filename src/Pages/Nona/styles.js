@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Boddy = styled.div`
-  padding: 20vh;
+  padding: 20vh  30vh 20vh  20vh;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 0.6fr;
@@ -51,6 +51,7 @@ export const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: 10vh;
 
   @media (max-width: 600px) {
     padding: 25px;
@@ -98,7 +99,7 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h2`
   color: #4B4949;
-  width: 50%;
+  width: 60%;
   font-weight: 300;
   font-family: 'Muli', sans-serif;
   word-break: break-word;
