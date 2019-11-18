@@ -4,12 +4,12 @@ import styled from "styled-components";
 // Calculate the hypotenuse of an isosceles triangle.
 const calcHyp = leg => Math.sqrt(leg ** 2 * 2);
 const players = [
-  "/Assets/velha/kati.png",
-  "/Assets/velha/julia.png",
-  "/Assets/velha/matheus.png",
-  "/Assets/velha/carol.png",
-  "/Assets/velha/matheus 1.png",
-  "/Assets/velha/cabeca1.png",
+  "/Assets/Velha/kati.png",
+  "/Assets/Velha/julia.png",
+  "/Assets/Velha/matheus.png",
+  "/Assets/Velha/carol.png",
+  "/Assets/Velha/mateus1.png",
+  "/Assets/Velha/cabeca1.png",
 ]
 const index1 = Math.floor((Math.random() * 3))
 const index2 = Math.floor((Math.random() * (6 - 3) + 3))

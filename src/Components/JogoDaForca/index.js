@@ -166,7 +166,7 @@ export default class JogoDaForca extends Component {
             isOpen={isOpen}
             onCancel={() => setOpen(!isOpen)}
             footer={null}
-            width={'70vw'}
+            width={'80vw'}
           >
             {
               this.state.segredo === this.state.sorteada ? (
@@ -179,8 +179,7 @@ export default class JogoDaForca extends Component {
               ) : (
                   <Content>
                     <div>
-                      <Forca height={350} erros={this.state.erros} />
-                      <Dica data={this.state.data} index={this.state.index} />
+                      <Forca height={450} erros={this.state.erros} />
                     </div>
                     <PalavraBox>
                       <LetraErrada>
@@ -204,9 +203,10 @@ export default class JogoDaForca extends Component {
                       {
                         this.state.erros === 6 ? (
                           this.showConfirm()
-                        ) : null
-                      }
+                          ) : null
+                        }
                       <Buttons handle={this.handleEvent} />
+                      <Dica data={this.state.data} index={this.state.index} />
                     </PalavraBox>
                   </Content >
                 )
@@ -233,7 +233,7 @@ export default class JogoDaForca extends Component {
               ) : (
                   <Content>
                     <div>
-                      <Forca height={350} erros={this.state.erros} />
+                      <Forca height={450} erros={this.state.erros} />
                       <Dica data={this.state.data} index={this.state.index} />
                     </div>
                     <PalavraBox>
