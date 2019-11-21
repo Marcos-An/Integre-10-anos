@@ -11,12 +11,13 @@ export const Content = styled.div`
   background-repeat: no-repeat;
   background-size: 50px,
                    70px,
-                   50px,
+                   25px,
                    30px;
   background-position: right 90vh top 6vh,
                        left 5vh bottom 5vh,
                        right 5vh bottom 40vh,
                        left 5vh top 15vh;
+  
   padding: 7vh 20vh 93vh 20vh;
   .btn{
     margin-top: 10px;
