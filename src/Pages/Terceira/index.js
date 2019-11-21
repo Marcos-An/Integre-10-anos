@@ -26,7 +26,7 @@ export default function Quarta() {
                 Nossa história é, sem dúvida, marcada por muitos desafios e superações,
                 mas acima de tudo, muita dedicação e pioneirismo na área digital.
             </Text>
-              <Button onClick={() => setOpen(!isOpen)}>Continuar</Button>
+              <Button onClick={() => setOpen(!isOpen)}>Jogar</Button>
             </>
 
           ) : compartilhar === true && compartilhado === false ? (

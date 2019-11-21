@@ -2,13 +2,14 @@ import styled from 'styled-components'
 
 export const Content = styled.div`
   display: grid;
-  grid-template-columns: 0.6fr 1.4fr;
+  grid-template-columns: 0.9fr 1.4fr;
   justify-items: center;
   align-items: center;
-  height: 78vh;
+  height: 81vh;
 
   @media (max-width: 700px){
-    height: 102vh;
+    height: 100vh;
+    padding: 0px;
     margin-top: -45px;
     grid-template-columns: 1fr;
     align-items: flex-end;
@@ -40,8 +41,7 @@ export const LetraErrada = styled.div`
   display: flex;
   justify-content: center;
   height: 40px;
-  padding-bottom: 100px;  
-
+  margin-top: 5vh;
   @media(max-width: 700px){
     display: block;
     padding-bottom: 10px;  
@@ -50,13 +50,13 @@ export const LetraErrada = styled.div`
 
 export const Letra = styled.div`
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  border-bottom:2px solid gray;
-  margin-right: 20px;
+  width: 80px;
+  height: 80px;
+  background: #ddd;
+  margin-right: 10px;
   text-align: center;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 50px;
   text-transform: uppercase;
 
   @media(max-width: 700px){
@@ -71,7 +71,7 @@ export const Erradas = styled.h3`
   color: #9e9b9b;
   margin-right: 10px;
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   text-transform: uppercase;
   animation-name: errada;
@@ -80,41 +80,33 @@ export const Erradas = styled.h3`
   @keyframes errada {
   25%  {
     color: #ff3c2e;
-    font-size: 47px;
+    font-size: 37px;
     }
   50%  {
     color: #c96059;
-    font-size: 45px;
+    font-size: 34px;
     }
   100% {
     color: #9e9b9b;
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
   @media(max-width: 700px){
     margin-right: 0px;
-    font-size: 25px;
+    font-size: 19px;
     @keyframes example {
       0%  {
         color: #ff3c2e;
-        font-size: 32px;
-        }
-      25%  {
-        color: #ff3c2e;
-        font-size: 30px;
-        }
-      50%  {
-        color: #c96059;
-        font-size: 28px;
+        font-size: 23px;
         }
         50%  {
         color: #c96059;
-        font-size: 26px;
+        font-size: 20px;
         }
       100% {
         color: #9e9b9b;
-        font-size: 25px;
+        font-size: 19px;
       }
     }
   }
@@ -142,9 +134,8 @@ export const Button = styled.button`
   padding: 4px 12px;
   font-size: 20px;
   border: none;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px -4px rgba(0,0,0,0.7);
-  background-color: white;
+  border-radius: 20px;
+  background-color: #d2fff6;
   color: #333;
   font-weight: 600;
 
@@ -155,34 +146,29 @@ export const Button = styled.button`
 `;
 
 export const Dica = styled.div`
-  width: 300px;
-  height: 50px;
-  margin-top: 60px;
-  padding-left: 15px;
+  width: 350px;
+  height: 40px;
   display: flex;
+  border-radius: 20px;
+  justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.32);
+  margin-bottom: 10vh;
+  background: #069367;
 
   @media(max-width: 700px){   
-    margin-top: -60px;
-    margin: 15px 0px ;
-    font-size: 18px;
-    padding-left: 0px;
+    font-size: 15px;
+    width: 280px;
     justify-content: center;
   }
 `;
 
-export const TextDica = styled.h5`
+export const TextDica = styled.h4`
+  margin: 0px;
+  color: #fff;
 
 `;
-
-export const Text = styled.h5`
-  margin-left: 5px;
-`;
-
 export const Acertou = styled.div`
   margin: 8vh 0vh;
-  height: 35vh;
   display: flex;
   flex-direction: column;
   align-items: center;

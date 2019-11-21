@@ -1,20 +1,10 @@
 import React from 'react'
-import { Dica, TextDica, Text } from './styles'
-import { Icon } from 'antd';
+import { Dica, TextDica } from './styles'
 
 export default function Dicas(props) {
   return (
     <Dica>
-      <TextDica>
-        <Icon
-          style={{ marginRight: 5 }}
-          type="info-circle"
-          theme="twoTone"
-          twoToneColor="#faad14"
-        />
-        Dica:
-      </TextDica>
-      <Text> {`${props.data[props.index].descricao}`} </Text>
+      <TextDica>Dica: {`${props.data[props.index].descricao}`}</TextDica>
     </Dica>
   )
 }

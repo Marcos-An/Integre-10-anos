@@ -17,7 +17,6 @@ export const Button = styled.button`
 export const ButtonShare = styled.div`
   display: flex;
   align-items: center;
-  padding: 7px 25px 7px 6px ;
   font-family: 'Muli', sans-serif;
   font-weight: 700;
   font-size: 17px;

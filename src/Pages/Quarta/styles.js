@@ -4,6 +4,10 @@ export const Content = styled.div`
   display: flex;
   height: 100vh;
   flex-direction: column;
+  background: url("/Assets/olinho.gif");
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: right 100vh top 6vh;
   padding: 7vh 20vh 93vh 20vh;
   .btn{
     margin-top: 10px;

@@ -76,15 +76,6 @@ export default class JogoDaForca extends Component {
       this.handleErro()
     }, 100);
   }
-  restart() {
-    this.setState({ erros: 0 })
-    this.setState({ letrasErradas: '' })
-    this.setState({ letrasErradasArray: [] })
-    this.setState({ segredo: '' })
-    setTimeout(() => {
-      this.componentDidMountAgain()
-    }, 100);
-  }
   index() {
     this.setState({ index: Math.floor((Math.random() * 3) + 1) })
   }
@@ -115,7 +106,11 @@ export default class JogoDaForca extends Component {
       okText: 'Sim',
       cancelText: 'Cancelar',
       onOk: () => {
-        this.restart();
+        this.setState({ erros: 0 })
+        this.setState({ letrasErradas: '' })
+        this.setState({ letrasErradasArray: [] })
+        this.setState({ segredo: '' })
+        this.componentDidMountAgain()
       },
       onCancel() { },
     });
@@ -174,15 +169,7 @@ export default class JogoDaForca extends Component {
                 <Forca height={500} erros={this.state.erros} />
               </div>
               <PalavraBox>
-                <LetraErrada>
-                  {
-                    this.state.letrasErradasArray.map((item, index) => (
-                      <Erradas key={index}>
-                        {`${item}`}
-                      </Erradas>
-                    ))
-                  }
-                </LetraErrada>
+                <Dica data={this.state.data} index={this.state.index} />
                 <Palavra>
                   {
                     this.state.sorteadaLetras.map((item, index) => (
@@ -193,7 +180,7 @@ export default class JogoDaForca extends Component {
                   }
                 </Palavra>
                 {
-                  this.state.erros === 8 ? (
+                  this.state.erros === 6 ? (
                     this.showConfirm()
                   ) : null
                 }
@@ -208,8 +195,16 @@ export default class JogoDaForca extends Component {
 
                   ) : (
                       <>
+                        <LetraErrada>
+                          {
+                            this.state.letrasErradasArray.map((item, index) => (
+                              <Erradas key={index}>
+                                {`${item}`}
+                              </Erradas>
+                            ))
+                          }
+                        </LetraErrada>
                         <Buttons handle={this.handleEvent} />
-                        <Dica data={this.state.data} index={this.state.index} />
                       </>
                     )
                 }
@@ -228,18 +223,10 @@ export default class JogoDaForca extends Component {
           >
             <Content>
               <div>
-                <Forca height={500} erros={this.state.erros} />
+                <Forca height={700} erros={this.state.erros} />
               </div>
               <PalavraBox>
-                <LetraErrada>
-                  {
-                    this.state.letrasErradasArray.map((item, index) => (
-                      <Erradas key={index}>
-                        {`${item}`}
-                      </Erradas>
-                    ))
-                  }
-                </LetraErrada>
+                <Dica data={this.state.data} index={this.state.index} />
                 <Palavra>
                   {
                     this.state.sorteadaLetras.map((item, index) => (
@@ -250,7 +237,7 @@ export default class JogoDaForca extends Component {
                   }
                 </Palavra>
                 {
-                  this.state.erros === 8 ? (
+                  this.state.erros === 6 ? (
                     this.showConfirm()
                   ) : null
                 }
@@ -265,8 +252,16 @@ export default class JogoDaForca extends Component {
 
                   ) : (
                       <>
+                        <LetraErrada>
+                          {
+                            this.state.letrasErradasArray.map((item, index) => (
+                              <Erradas key={index}>
+                                {`${item}`}
+                              </Erradas>
+                            ))
+                          }
+                        </LetraErrada>
                         <Buttons handle={this.handleEvent} />
-                        <Dica data={this.state.data} index={this.state.index} />
                       </>
                     )
                 }
@@ -311,7 +306,7 @@ export default class JogoDaForca extends Component {
                   }
                 </Palavra>
                 {
-                  this.state.erros === 6 ? (
+                  this.state.erros === 8 ? (
                     this.showConfirm()
                   ) : null
                 }

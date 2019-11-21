@@ -5,10 +5,9 @@ export default function Modals(props) {
   return (
     <Modal
       style={{ top: 20 }}
-      title={props.title}
       visible={props.isOpen}
       onCancel={props.onCancel}
-      bodyStyle={{ padding: 10 }}
+      bodyStyle={{ padding: '30px 10px' }}
       footer={null}
       width={props.width}
     >
