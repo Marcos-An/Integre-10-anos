@@ -46,7 +46,7 @@ export default function Quarta() {
         ) : (
             <>
               <BoxNext>
-                <a href="/Setima">
+                <a href="/Setima" style={{ color: 'black' }} >
                   <Button>Compartilhe para desbloquear</Button>
                 </a>
               </BoxNext>

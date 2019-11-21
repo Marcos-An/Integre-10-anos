@@ -18,7 +18,7 @@ export const Content = styled.div`
                        right 5vh bottom 40vh,
                        left 5vh top 15vh;
   
-  padding: 7vh 20vh 93vh 20vh;
+  padding: 7vh 20vh 93vh 20vh;  
   .btn{
     margin-top: 10px;
     align-self: center;
