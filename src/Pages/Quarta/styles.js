@@ -5,28 +5,40 @@ export const Content = styled.div`
   height: 100vh;
   flex-direction: column;
   background: url("/Assets/olinho.gif"),
-              url("/Assets/olinho.gif"),
+              url("/Assets/olinho-contra.gif"),
+              url("/Assets/olinho-contra.gif"),
               url("/Assets/olinho.gif"),
               url("/Assets/olinho.gif");
   background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: 50px,
                    70px,
-                   25px,
+                   40px,
+                   30px,
                    30px;
   background-position: right 90vh top 6vh,
                        left 5vh bottom 5vh,
                        right 5vh bottom 40vh,
-                       left 5vh top 15vh;
+                       left 5vh top 15vh,
+                       right 40vh bottom 5vh;
   
   padding: 7vh 20vh 93vh 20vh;  
   .btn{
     margin-top: 10px;
     align-self: center;
   }
+
   @media (max-width: 700px){
     justify-content: flex-start;
     align-items: flex-start;
     padding: 8vh 0vh 0vh 0vh;
+    background: url("/Assets/olinho.gif"),
+              url("/Assets/olinho.gif");
+    background-repeat: no-repeat;
+    background-size: 20px,
+                     30px;
+    background-position: right 5vh top 25vh,
+                        left 5vh top 15vh;
     .btn{
       margin: 20px 0px;
       align-self: center;
