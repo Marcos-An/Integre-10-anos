@@ -6,7 +6,7 @@ export default class ResponsivePlayer extends Component {
         <div style={{ padding: "100.0% 29vh 0 ", position: "relative" }}>
           <div style={{ height: '100%', left: '0', position: 'absolute', top: '0', width: '100%' }}>
             <iframe
-              src="https://fast.wistia.net/embed/iframe/qsj2i8nsau?seo=false&videoFoam=true"
+              src="https://fast.wistia.net/embed/iframe/lw9hm2oxii?seo=false&videoFoam=true"
               title="Celebrar na web Marcela Sperotto.mp4 Video"
               allowtransparency="true"
               frameborder="0"

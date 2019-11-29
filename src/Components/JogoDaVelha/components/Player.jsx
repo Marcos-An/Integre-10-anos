@@ -9,10 +9,15 @@ const players = [
   "/Assets/Velha/matheus.png",
   "/Assets/Velha/carol.png",
   "/Assets/Velha/mateus1.png",
-  "/Assets/Velha/cabeca1.png",
+  "/Assets/Velha/tarciso.png",
+  "/Assets/Velha/marcos.png",
+  "/Assets/Velha/pedro.png",
+  "/Assets/Velha/debora.png",
+  "/Assets/Velha/yoshio.png",
+  "/Assets/Velha/fer.png",
 ]
-const index1 = Math.floor((Math.random() * 3))
-const index2 = Math.floor((Math.random() * (6 - 3) + 3))
+const index1 = Math.floor((Math.random() * 5))
+const index2 = Math.floor((Math.random() * (11 - 5) + 5))
 
 const StyledPlayerX = styled.div`
   position: relative;

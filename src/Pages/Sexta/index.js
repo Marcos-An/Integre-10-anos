@@ -23,10 +23,7 @@ export default function Quarta() {
     <Content url="/Assets/bg.png">
       <Loguinho />
       <VideoContent>
-        <Video
-          url="https://www.youtube.com/embed/xMHP6xzSxP8"
-          title="Video inicial"
-        />
+        <Video />
       </VideoContent>
       {
         compartilhado === false ? (
