@@ -281,7 +281,7 @@ export default class JogoDaForca extends Component {
 
             <Content>
               <Top>
-                <Forca height={200} erros={this.state.erros} />
+                <Forca height={180} erros={this.state.erros} />
                 <LetraErrada>
                   {
                     this.state.letrasErradasArray.map((item, index) => (
