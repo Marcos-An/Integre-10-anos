@@ -6,7 +6,7 @@ export default class ResponsivePlayer extends Component {
     return (
       <>
         <MediaQuery maxDeviceWidth={800}>
-          <div style={{ padding: "45.9% 53vh 0px", position: "relative" }}>
+          <div style={{ padding: "45.9% 28vh 0px", position: "relative" }}>
             <div style={{ height: '100%', left: '0', position: 'absolute', top: '0', width: '100%' }}>
               <iframe
                 src="https://fast.wistia.net/embed/iframe/6ehd2gab41?seo=false&videoFoam=true"

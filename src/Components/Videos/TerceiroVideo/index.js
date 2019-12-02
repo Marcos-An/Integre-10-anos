@@ -23,6 +23,7 @@ export default class ResponsivePlayer extends Component {
           </div>
           <script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
         </MediaQuery>
+
         <MediaQuery minDeviceWidth={900}>
           <div class="wistia_responsive_padding" style={{ padding: '46.25% 0 0 0', position: 'relative' }}>
             <div class="wistia_responsive_wrapper" style={{ height: '100%', left: '0', position: 'absolute', top: '0', width: '100%' }}>

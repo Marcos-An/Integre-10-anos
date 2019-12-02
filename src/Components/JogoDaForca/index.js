@@ -155,7 +155,7 @@ export default class JogoDaForca extends Component {
 
     return (
       <>
-        <MedaiQuery minWidth={800} maxDeviceWidth={1499}>
+        <MedaiQuery minWidth={801} maxDeviceWidth={1499}>
           <Modals
             title="Qual é a palavra?"
             isOpen={isOpen}
@@ -270,7 +270,7 @@ export default class JogoDaForca extends Component {
           </Modals>
         </MedaiQuery>
 
-        <MedaiQuery maxWidth={700}>
+        <MedaiQuery maxWidth={800}>
           <Modals
             title="Qual é a palavra?"
             isOpen={isOpen}
@@ -281,7 +281,7 @@ export default class JogoDaForca extends Component {
 
             <Content>
               <Top>
-                <Forca height={230} erros={this.state.erros} />
+                <Forca height={200} erros={this.state.erros} />
                 <LetraErrada>
                   {
                     this.state.letrasErradasArray.map((item, index) => (
