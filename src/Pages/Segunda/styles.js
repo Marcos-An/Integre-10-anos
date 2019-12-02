@@ -75,7 +75,7 @@ export const Left = styled.div`
     flex-direction: column;
     align-items: center;
     grid-row-start: 1;
-    height: 80vh;    
+    height: 100vh;    
     .Logo {
       margin-top: 5vh;
     }
@@ -131,7 +131,7 @@ export const Right = styled.div`
       width: 100%;
       img {
         width: 100%;
-        margin-top: 5vh;
+        margin-top: 7vh;
         margin-bottom: 5vh;
       }
     }
