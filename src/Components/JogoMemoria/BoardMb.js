@@ -80,7 +80,7 @@ export default class Memory extends Component {
         isOpen={isOpen}
         onCancel={() => setOpen(!isOpen)}
         footer={null}
-        width={'95vw'}
+        width={'100vw'}
       >
         <Content>
           {this.state.terminou ? (

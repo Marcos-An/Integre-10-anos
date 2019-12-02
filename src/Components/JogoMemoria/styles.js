@@ -33,7 +33,7 @@ export const Fotos = styled.div`
   grid-row-gap: 20px;
   
   @media (max-width: 700px){
-    grid-template-columns: repeat(2, 150px);
+    grid-template-columns: repeat(2, 135px);
     grid-gap: 20px;
   }
   @media (min-width: 1500px){
