@@ -4,7 +4,7 @@ export const Body = styled.div`
   background: url(${props => props.url});
   padding: 7vh 20vh 0vh 20vh;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     padding: 8vh 20vh ;
   }
 `;
@@ -21,7 +21,7 @@ export const Content = styled.div`
     align-self: flex-start;
   }
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     text-align: center;
   }
 `;
@@ -29,7 +29,7 @@ export const Content = styled.div`
 export const VideoContent = styled.div`
   margin-top: 5vh;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     width: 100vw;
   }
 `;
@@ -40,7 +40,7 @@ export const Text = styled.h3`
   margin: 20px 0px 30px 0px;
   width: 50vw;
   
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     width: 80vw;
   }
 `;

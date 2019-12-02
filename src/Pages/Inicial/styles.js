@@ -23,7 +23,7 @@ export const Boddy = styled.div`
   background-repeat: no-repeat;
 
   
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     background-image: url('/Assets/Bg/TrianguloMb.svg'), 
                       url('/Assets/Bg/Bolinhas.svg'),
                       url('/Assets/Bg/BolinhaAzulMb.svg'),
@@ -62,7 +62,7 @@ export const Left = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     padding: 25px;
     text-align: center;
     justify-content: center;
@@ -74,7 +74,7 @@ export const Right = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     flex-direction: column;
   }
   @media (min-width: 1500px) {
@@ -92,7 +92,7 @@ export const Title = styled.h1`
   font-weight: 900;
   word-break: break-word;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     width: 100%;
     line-height: 35px;
     font-size: 28px;
@@ -112,7 +112,7 @@ export const SubTitle = styled.h2`
   font-size: 20px;
   margin: 20px 0px 0px 0px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     width: 100%;
     padding: 0px 50px;
     margin: 20px 0px 10px 0px;

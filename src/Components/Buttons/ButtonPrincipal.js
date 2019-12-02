@@ -12,6 +12,10 @@ export const Button = styled.button`
     padding: 15px 75px; 
     font-size: 22px;
   }
+  @media (max-width: 800px) {
+    padding: 10px 40px;
+    font-size: 15px;
+  }
 `;
 
 export const ButtonShare = styled.div`

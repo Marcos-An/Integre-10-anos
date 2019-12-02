@@ -28,7 +28,7 @@ export const Content = styled.div`
     align-self: center;
   }
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     justify-content: flex-start;
     align-items: flex-start;
     padding: 8vh 0vh 0vh 0vh;
@@ -66,7 +66,7 @@ export const Fotos = styled.div`
   grid-column-gap: 50px;
   align-self: center;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     grid-template-columns: repeat(2, 140px);
     grid-gap: 20px;
   }
@@ -144,7 +144,7 @@ export const Description = styled.h2`
   word-break: break-word;
   font-family: 'Muli', sans-serif;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     font-size: 14px;
   }
   @media (min-width: 1500){
@@ -161,7 +161,7 @@ export const DescriptionZoom = styled.h2`
   font-family: 'Muli', sans-serif;
   word-break: break-word;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     font-size: 17px;
     text-align: center;
     margin-top: 0px;
@@ -181,7 +181,7 @@ export const Text = styled.h2`
   word-break: break-word;
   font-family: 'Muli', sans-serif;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     font-size: 18px !important;
     text-align: center;
     margin: 20px 0px 40px 0px;

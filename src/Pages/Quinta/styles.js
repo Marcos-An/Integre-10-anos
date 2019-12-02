@@ -18,14 +18,14 @@ export const Content = styled.div`
 
   background-repeat: no-repeat;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     background-image: none;
     padding: 4vh 0vh;
   }
   .btn{
     display: none;
     
-    @media (max-width: 700px){
+    @media (max-width: 800px){
       display: flex;
       justify-self: center;
       margin: 30px;
@@ -34,7 +34,7 @@ export const Content = styled.div`
   .btn1{
     margin: 6vh 0px 2vh 0px;
 
-    @media (max-width: 700px){
+    @media (max-width: 800px){
       display: none;
     }
   }
@@ -47,7 +47,7 @@ export const Body = styled.div`
   height: 100vh;  
   align-items: center;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     grid-gap: 30px;
     grid-template-columns: 1fr;
     padding: 0px;
@@ -61,7 +61,7 @@ export const Box = styled.div`
   flex-direction: column;
   align-self: flex-start;
   height: 30vh;
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     align-self: center;
   }
   @media (min-width: 1500px) {
@@ -79,7 +79,7 @@ export const Left = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     grid-row-start: 1;
     height: 60vh;
@@ -109,7 +109,7 @@ export const Text = styled.p`
   font-weight: 300;
   font-family: 'Muli', sans-serif;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     font-size: 17px;
   }
 `;
@@ -125,7 +125,7 @@ export const Right = styled.div`
   background-position: center;
   background-repeat: no-repeat;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     height: 60vh;
     width: 100%;
   }

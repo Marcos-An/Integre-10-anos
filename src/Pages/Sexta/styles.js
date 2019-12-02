@@ -13,7 +13,7 @@ export const Content = styled.div`
     align-self: flex-start;
   }
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     text-align: center;
     padding: 8vh 20vh ;
   }
@@ -35,7 +35,7 @@ export const Info = styled.div`
       margin-top: -4vh;
     }
   }
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     align-items: center;
     a {
       margin-top: 5vh;
@@ -48,7 +48,7 @@ export const Box = styled.div`
   align-self: center;
   width: 100%;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     justify-items: center;
     align-items: center;
     flex-direction: column !important;
@@ -65,7 +65,7 @@ export const BoxNext = styled.div`
   width: 50vw;
   margin-top: 10vh;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     justify-items: center;
     align-items: center;
     flex-direction: column !important;
@@ -76,7 +76,7 @@ export const VideoContent = styled.div`
   margin-top: 5vh;
   width: 50vw;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     width: 100vw;
   }
 `;

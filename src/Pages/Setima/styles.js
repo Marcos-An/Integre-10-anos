@@ -19,7 +19,7 @@ export const Content = styled.div`
     margin-top: 7vh;
   }
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     padding: 8vh 0vh 0vh 0vh;
     .btn{
       margin: 20px 0px;
@@ -48,7 +48,7 @@ export const Fotos = styled.div`
   grid-column-gap: 50px;
   align-self: center;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     grid-template-columns: repeat(2, 140px);
     grid-gap: 20px;
   }
@@ -76,7 +76,7 @@ export const Box = styled.div`
   align-items: center;
   margin-bottom: 40px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     flex-direction: column;
   }
 `;
@@ -104,7 +104,7 @@ export const Text = styled.h2`
   word-break: break-word;
   font-family: 'Muli', sans-serif;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     font-size: 18px !important;
     text-align: center;
     margin: 20px 0px 40px 0px;

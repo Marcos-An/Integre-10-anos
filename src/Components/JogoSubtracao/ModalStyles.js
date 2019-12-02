@@ -17,7 +17,7 @@ export const ContentConta = styled.div`
     font-size: 30px;
     color: #55EDD2;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     .input{
       margin: -15px 0px 0px 20px;
       height: 35px;
@@ -32,7 +32,7 @@ export const Conta = styled.h1`
   word-break: break-all;
 
   @media (max-width: 600px) {
-    font-size: 29px;
+    font-size: 19px;
   }
 `;
 
@@ -42,8 +42,8 @@ export const Mensagem = styled.h1`
   margin-bottom: 20px;
   word-break: break-all;
 
-  @media (max-width: 600px) {
-    font-size: 18px;
+  @media (max-width: 800px) {
+    font-size: 15px;
     text-align: center;
   }
 `;

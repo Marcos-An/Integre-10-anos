@@ -14,14 +14,14 @@ export const Content = styled.div`
 
   background-repeat: no-repeat;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     background-image: none;
   }
 
   .btn{
     display: none;
     
-    @media (max-width: 700px){
+    @media (max-width: 800px){
       display: flex;
       justify-self: center;
       margin-bottom: 5vh;
@@ -30,7 +30,7 @@ export const Content = styled.div`
   .btn1{
     margin: 10px 0px 40px 0px;
 
-    @media (max-width: 700px){
+    @media (max-width: 800px){
       display: none;
     }
   }
@@ -53,7 +53,7 @@ export const Body = styled.div`
   grid-gap: 30px;
   align-items: flex-end;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     grid-gap: 0px;
     grid-template-columns: 1fr;
     padding: 0px;
@@ -71,7 +71,7 @@ export const Left = styled.div`
     margin-bottom: 5vh;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
     grid-row-start: 1;
@@ -96,7 +96,7 @@ export const Center = styled.div`
       height: 150px;
       width: 150px;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
       display: none;
       margin: 0;
       
@@ -111,7 +111,7 @@ export const Text = styled.h2`
   font-weight: 300;
   font-family: 'Muli', sans-serif;
   margin-top: -5vh;
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     margin-top: 0vh;
     font-size: 17px;
   }
@@ -127,7 +127,7 @@ export const Right = styled.div`
       height: 60vh;
     }
     
-    @media (max-width: 700px){
+    @media (max-width: 800px){
       width: 100%;
       img {
         width: 100%;

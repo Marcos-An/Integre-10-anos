@@ -5,7 +5,7 @@ export default class ResponsivePlayer extends Component {
   render() {
     return (
       <>
-        <MediaQuery maxDeviceWidth={700}>
+        <MediaQuery maxDeviceWidth={800}>
           <div style={{ padding: "45.9% 53vh 0px", position: "relative" }}>
             <div style={{ height: '100%', left: '0', position: 'absolute', top: '0', width: '100%' }}>
               <iframe

@@ -43,7 +43,7 @@ export default function TelaInicial() {
       </MediaQuery>
 
 
-      <MediaQuery maxDeviceWidth={700}>
+      <MediaQuery maxDeviceWidth={800}>
         <Boddy>
           <Left>
             <Loguinho className="Loguinho" />
@@ -51,10 +51,7 @@ export default function TelaInicial() {
             <SubTitle>Conheça a nossa história enquanto se diverte!</SubTitle>
           </Left>
           <Right>
-            <Video
-              url="https://www.youtube.com/embed/_xKCwzgI68s"
-              title="Video inicial"
-            />
+            <Video />
             <Button style={{ margin: 30 }} onClick={() => setOpen(!isOpen)}>
               Começar!
           </Button>
