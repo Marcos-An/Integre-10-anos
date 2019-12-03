@@ -9,8 +9,8 @@ export default class ResponsivePlayer extends Component {
           <div style={{ padding: "45% 0 0 ", position: "relative" }}>
             <div style={{ height: '100%', left: '0', position: 'absolute', top: '0', width: '100%' }}>
               <iframe
-                src="https://fast.wistia.net/embed/iframe/ecc49jdnhj?videoFoam=true"
-                title="Agradecimento real Video"
+                src="https://fast.wistia.net/embed/iframe/a2ndrypaoy?videoFoam=true"
+                title="video agradecimento certo"
                 allowtransparency="true"
                 frameborder="0"
                 scrolling="no"
@@ -29,8 +29,8 @@ export default class ResponsivePlayer extends Component {
           <div class="wistia_responsive_padding" style={{ padding: '46.25% 0 0 0', position: 'relative' }}>
             <div class="wistia_responsive_wrapper" style={{ height: '100%', left: '0', position: 'absolute', top: '0', width: '100%' }}>
               <iframe
-                src="https://fast.wistia.net/embed/iframe/ecc49jdnhj?videoFoam=true"
-                title="Agradecimento real Video"
+                src="https://fast.wistia.net/embed/iframe/a2ndrypaoy?videoFoam=true"
+                title="video agradecimento certo"
                 allowtransparency="true"
                 frameborder="0"
                 scrolling="no"
