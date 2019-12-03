@@ -32,7 +32,7 @@ export default function SegundaTela() {
           <img className="Direita" src="/Assets/FrameDireita.png" alt="" />
         </Center>
         <Right url="/Assets/Bg/post.png" />
-        <JogoDaVelha isOpen={isOpen} setOpen={setOpen} url={"/Sexta"}/>
+        <JogoDaVelha isOpen={isOpen} setOpen={setOpen} url={"/Setima"} />
         <Button className="btn" onClick={() => setOpen(!isOpen)}> Próximo jogo </Button>
       </Body>
       <Button className="btn1" onClick={() => setOpen(!isOpen)}> Próximo jogo </Button>

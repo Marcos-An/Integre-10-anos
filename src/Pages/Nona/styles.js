@@ -28,7 +28,7 @@ export const Boddy = styled.div`
                       url('/Assets/Bg/Rectangle.svg');
 
     background-position: right 0px top 10px,
-                        left -10vh bottom 30vh,
+                        left -10vh bottom 35vh,
                         left 20px top 70px,
                         right 30px top 230px,
                         left 700px bottom 200px;
@@ -55,6 +55,7 @@ export const Left = styled.div`
 
   @media (max-width: 800px) {
     padding: 25px;
+    margin-left: 0vh;
     text-align: center;
     justify-content: center;
   }
@@ -69,7 +70,7 @@ export const Right = styled.div`
   background-repeat: no-repeat;
 
   @media (max-width: 800px) {
-    height: 350px;
+    height: 300px;
   }
   @media (min-width: 1500px) {
     padding: 4px 0px !important;
@@ -108,7 +109,6 @@ export const SubTitle = styled.h2`
 
   @media (max-width: 800px) {
     width: 100%;
-    padding: 0px 50px;
     margin: 20px 0px 10px 0px;
     font-size: 17px;
     grid-template-columns: 1fr;

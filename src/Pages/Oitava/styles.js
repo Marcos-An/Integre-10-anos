@@ -29,8 +29,9 @@ export const VideoContent = styled.div`
   margin: 5vh;
   width: 50vw;
 
-  @media (max-width: 700px){
+  @media (max-width: 800px){
     width: 100vw;
+    margin-bottom: 0vh;
     height: 36vh; 
   }
 `;
