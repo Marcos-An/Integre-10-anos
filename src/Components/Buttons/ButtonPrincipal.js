@@ -17,6 +17,24 @@ export const Button = styled.button`
     font-size: 15px;
   }
 `;
+export const ButtonInicio = styled.button`
+  padding: 10px 70px;
+  font-family: 'Muli', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  border: none;
+  color: #fff;
+  background: rgb(54, 97, 207);
+
+  @media (min-width: 1500px) {
+    padding: 15px 75px; 
+    font-size: 22px;
+  }
+  @media (max-width: 800px) {
+    padding: 10px 40px;
+    font-size: 15px;
+  }
+`;
 
 export const ButtonShare = styled.div`
   display: flex;
