@@ -38,7 +38,7 @@ export const Text = styled.h3`
   color: #5C5C5C;
   font-family: 'Muli', sans-serif;
   margin: 20px 0px 30px 0px;
-  width: 50vw;
+  width: 40vw;
   
   @media (max-width: 800px){
     width: 80vw;

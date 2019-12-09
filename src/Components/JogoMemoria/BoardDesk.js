@@ -34,10 +34,19 @@ export default class Memory extends Component {
       lockboard: false
     }
   }
+  componentDidMount() {
+    this.state.board.forEach((e) => {
+      e.isVisible = true
+    })
+    this.state.board.forEach((e) => {
+      e.isVisible = false
+    })
+  }
 
   handleVisible(index) {
     var newBoard = [...this.state.board]
     this.setState({ board: newBoard })
+
 
     if (newBoard[index].check !== true && this.state.lockboard !== true) {
       if (this.state.selected === false) {
@@ -95,9 +104,7 @@ export default class Memory extends Component {
           {this.state.terminou ? (
             <Box>
               <Mensagem>
-                <span role="img" aria-label="smile" style={{ fontSize: 25, marginRight: 10 }}>&#128513;</span>
                 Sua memória está ótima!
-                <span role="img" aria-label="smile" style={{ fontSize: 25, marginRight: 10 }}>&#128513;</span>
               </Mensagem>
               <a href="/Quinta" style={{ color: 'black' }}>
                 <Button style={{ marginTop: -10, marginBottom: 30 }}>
@@ -122,7 +129,7 @@ export default class Memory extends Component {
             )
           }
         </Content>
-      </Modal>
+      </Modal >
     )
   }
 }

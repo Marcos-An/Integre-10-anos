@@ -7,7 +7,8 @@ import {
   PalavraBox,
   LetraErrada,
   Acertou,
-  Top
+  Top,
+  Mensagem
 } from './styles'
 import Buttons from './Buttons'
 import ButtonsMobile from './ButtonsMobile'
@@ -30,23 +31,18 @@ export default class JogoDaForca extends Component {
       data: [
         {
           type: 'warning',
-          palavra: 'integre',
-          descricao: 'Algo que bla bla bla tututu',
+          palavra: 'tobias',
+          descricao: 'Ronca mas não é porco; É preto; Mascote; Tem hábitos alimentares duvidosos.',
         },
         {
           type: 'warning',
-          palavra: 'producao',
-          descricao: 'Algo que bla bla bla tututu',
+          palavra: 'brainst',
+          descricao: 'Explosão de ideias; Muita gente pensando junto; às vezes não serve pra nada, mas quando serve, meu amigo…',
         },
         {
           type: 'warning',
-          palavra: 'arte',
-          descricao: 'Algo que bla bla bla tututu',
-        },
-        {
-          type: 'warning',
-          palavra: 'roteiro',
-          descricao: 'Algo que bla bla bla tututu',
+          palavra: 'cafe',
+          descricao: 'Bebida vital; Elixir da criatividade; Não há vida sem',
         }
       ],
       segredo: '',
@@ -77,7 +73,7 @@ export default class JogoDaForca extends Component {
     }, 100);
   }
   index() {
-    this.setState({ index: Math.floor((Math.random() * 3) + 1) })
+    this.setState({ index: Math.floor(Math.random() * 3) })
   }
   handlePalavra() {
     setTimeout(() => {
@@ -187,7 +183,9 @@ export default class JogoDaForca extends Component {
                 {
                   this.state.segredo === this.state.sorteada ? (
                     <Acertou>
-                      <img src="/Assets/correct.png" alt="" />
+                      <Mensagem>
+                        Wow! Você está pronto para a próxima fase!
+              	      </Mensagem>
                       <a href="/Quarta" style={{ color: 'black', marginTop: '4vh' }}>
                         <Button> Veja o próximo conteúdo</Button>
                       </a>
@@ -244,7 +242,9 @@ export default class JogoDaForca extends Component {
                 {
                   this.state.segredo === this.state.sorteada ? (
                     <Acertou>
-                      <img src="/Assets/correct.png" alt="" />
+                      <Mensagem>
+                        Wow! Você está pronto para a próxima fase!
+              	      </Mensagem>
                       <a href="/Quarta" style={{ color: 'black', marginTop: '4vh' }}>
                         <Button> Veja o próximo conteúdo</Button>
                       </a>
@@ -313,7 +313,9 @@ export default class JogoDaForca extends Component {
                 {
                   this.state.segredo === this.state.sorteada ? (
                     <Acertou>
-                      <img src="/Assets/correct.png" alt="" />
+                      <Mensagem>
+                        Wow! Você está pronto para a próxima fase!
+              	      </Mensagem>
                       <a href="/Quarta" style={{ color: 'black', marginTop: '4vh' }}>
                         <Button style={{ padding: '10px 50px' }}> Veja o próximo conteúdo</Button>
                       </a>

@@ -105,7 +105,7 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h2`
   color: #4B4949;
-  width: 40%;
+  width: 45%;
   font-weight: 300;
   font-family: 'Muli', sans-serif;
   word-break: break-word;
@@ -114,7 +114,6 @@ export const SubTitle = styled.h2`
 
   @media (max-width: 800px) {
     width: 100%;
-    padding: 0px 50px;
     margin: 20px 0px 10px 0px;
     font-size: 17px;
     grid-template-columns: 1fr;

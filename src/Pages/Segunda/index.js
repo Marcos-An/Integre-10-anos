@@ -27,18 +27,18 @@ export default function SegundaTela() {
         <Center>
           <img src="/Assets/Bg/MolasCenter.svg" alt="" />
           <Text>
-            “Nossa história é, sem dúvida, marcada por muitos desafios
+            Nossa história é, sem dúvida, marcada por muitos desafios
             e superações, mas acima de tudo, muita dedicação e
-            pioneirismo na área digital”
+            pioneirismo na área digital.
           </Text>
           <JogoDaVelha isOpen={isOpen} setOpen={setOpen} url={"/Terceira"} />
         </Center>
         <Right>
           < img src="/Assets/Bg/bg2.png" alt="" />
         </Right>
-        <Button className="btn" onClick={() => setOpen(!isOpen)}> Próximo jogo </Button>
+        <Button className="btn" onClick={() => setOpen(!isOpen)}> Próxima fase </Button>
       </Body>
-      <Button className="btn1" onClick={() => setOpen(!isOpen)}> Próximo jogo </Button>
+      <Button className="btn1" onClick={() => setOpen(!isOpen)}> Próxima fase </Button>
     </Content>
   );
 }

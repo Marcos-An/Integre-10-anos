@@ -23,9 +23,8 @@ export default function Quarta() {
           compartilhar === false ? (
             <>
               <Text>
-                Nossa história é, sem dúvida, marcada por muitos desafios e superações,
-                mas acima de tudo, muita dedicação e pioneirismo na área digital.
-            </Text>
+                Quando tudo era só mato… Nós chegamos com a foice! Hehehehe (brincadeira, mas quase isso)
+              </Text>
               <Button onClick={() => setOpen(!isOpen)}>Jogar</Button>
             </>
 

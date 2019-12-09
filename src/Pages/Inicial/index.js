@@ -24,7 +24,7 @@ export default function TelaInicial() {
             <Loguinho />
             <div>
               <Title>Queremos jogar um jogo com você. Topas?</Title>
-              <SubTitle>Conheça a nossa história enquanto se diverte!</SubTitle>
+              <SubTitle>Como deu pra notar, queremos jogar com você. Bora?</SubTitle>
             </div>
             <div style={{ display: 'inline-block' }}>
               <ButtonInicio onClick={() => setOpen(!isOpen)}>
@@ -48,7 +48,7 @@ export default function TelaInicial() {
           <Left>
             <Loguinho className="Loguinho" />
             <Title>Queremos jogar um jogo com você. Topas?</Title>
-            <SubTitle>Conheça a nossa história enquanto se diverte!</SubTitle>
+            <SubTitle>Como deu pra notar, queremos jogar com você. Bora?</SubTitle>
           </Left>
           <Right>
             <Video />

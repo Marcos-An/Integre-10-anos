@@ -71,7 +71,7 @@ export const TextBox = styled.div`
   left: 20%;
   @media (max-width: 700px) {
     left: 0%;
-    margin: 13% 0% 8% 0%;
+    margin: 24% 0% 7% 0%;
   }
   @media (min-width: 1500px){
     left: 15%;
@@ -213,8 +213,8 @@ class App extends Component {
 
           <StyledBoard>
             <TextBox>
-              <Title> Jogo da Velha!</Title>
-              <Text> Arraste a cabeça de um de nossos amigos para vencer a máquina.</Text>
+              <Title>Você conhece o Jogo da Velha?</Title>
+              <Text>Clique em um dos quadrados ao lado e vença a máquina para continuar!</Text>
             </TextBox>
             <Board
               board={this.props.game.board}
@@ -278,8 +278,8 @@ class App extends Component {
                 colorPlayerO={NEPHRITIS}
               />
               <TextBox>
-                <Title> Jogo da Velha!</Title>
-                <Text> Arraste a cabeça de um de nossos amigos para vencer a máquina.</Text>
+                <Title>Você conhece o Jogo da Velha?</Title>
+                <Text>Clique em um dos quadrados ao lado e vença a máquina para continuar!</Text>
               </TextBox>
             </StyledBoard>
           </Content>
@@ -335,8 +335,8 @@ class App extends Component {
                 colorPlayerO={NEPHRITIS}
               />
               <TextBox>
-                <Title> Jogo da Velha!</Title>
-                <Text> Arraste a cabeça de um de nossos amigos para vencer a máquina.</Text>
+                <Title>Você conhece o Jogo da Velha?</Title>
+                <Text>Clique em um dos quadrados ao lado e vença a máquina para continuar!</Text>
               </TextBox>
             </StyledBoard>
           </Content>

@@ -49,9 +49,7 @@ export default function Modals(props) {
         ) : Resposta === 10 ? (
           <>
             <Mensagem>
-              <span role="img" aria-label="smile" style={{ fontSize: 20, marginRight: 10 }}>&#128513;</span>
-              Você é bom em exatas!
-              <span role="img" aria-label="smile" style={{ fontSize: 20, marginLeft: 10 }}>&#128513;</span>
+              Começou bem! Partiu próxima fase!
             </Mensagem>
             <a href="/Segunda" style={{ color: 'black' }}>
               <Button >Continuar</Button>

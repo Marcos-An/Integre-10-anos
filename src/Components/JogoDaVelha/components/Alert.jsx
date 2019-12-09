@@ -128,7 +128,7 @@ const Alert = ({
             <Winner name={winner} />
             <StyledMessageText>Você venceu!</StyledMessageText>
             <a href={`${url}`} style={{ color: 'black' }}>
-              <ButtonOrange className='btn'> Você é um anjo de luz! Continue!</ButtonOrange>
+              <ButtonOrange className='btn'>Você está mandando muito bem. Continue!</ButtonOrange>
             </a>
           </Content>
         ) : (

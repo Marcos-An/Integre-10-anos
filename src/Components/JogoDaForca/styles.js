@@ -10,7 +10,6 @@ export const Content = styled.div`
   @media (max-width: 700px){
     height: 100vh;
     padding: 0px;
-    margin-top: -45px;
     grid-template-columns: 1fr;
     align-items: flex-end;
   }
@@ -146,10 +145,10 @@ export const Button = styled.button`
 `;
 
 export const Dica = styled.div`
-  width: 350px;
+  width: 105%;
   height: 40px;
   display: flex;
-  border-radius: 20px;
+  border-radius: 15px;
   justify-content: center;
   align-items: center;
   margin-bottom: 10vh;
@@ -157,16 +156,20 @@ export const Dica = styled.div`
 
   @media(max-width: 700px){   
     font-size: 15px;
-    width: 280px;
-    justify-content: center;
+    margin-bottom: 7vh;
+    width: 100%;
+    height: 80px;
   }
 `;
 
 export const TextDica = styled.h4`
   margin: 0px;
   color: #fff;
-
+  @media(max-width: 700px){   
+    margin-left: 10px;
+  }
 `;
+
 export const Acertou = styled.div`
   margin: 8vh 0vh;
   display: flex;
@@ -178,5 +181,18 @@ export const Acertou = styled.div`
   }
   @media (max-width: 700px){
     height: 18vh;
+  }
+`;
+
+export const Mensagem = styled.h1`
+  color: #929393;
+  font-size: 25px;
+  margin-bottom: 20px;
+  word-break: break-all;
+
+  @media (max-width: 800px) {
+    font-size: 15px;
+    width: 70%;
+    text-align: center;
   }
 `;
