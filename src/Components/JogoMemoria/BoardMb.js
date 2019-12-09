@@ -91,13 +91,11 @@ export default class Memory extends Component {
           {this.state.terminou ? (
             <Box>
               <Mensagem>
-                <span role="img" aria-label="smile" style={{ fontSize: 20, marginRight: 10 }}>&#128513;</span>
                 Sua memória está ótima!
-                <span role="img" aria-label="smile" style={{ fontSize: 20, marginLeft: 10 }}>&#128513;</span>
               </Mensagem>
               <a href="/Quinta" style={{ color: 'black' }}>
                 <Button style={{ marginTop: -10, marginBottom: 30 }}>
-                  Sou fera! Next!
+                  Parabéns! Mas ainda não acabou…
                   </Button>
               </a>
             </Box>

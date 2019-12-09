@@ -5,14 +5,20 @@ import {
   SubTitle,
   Left,
   Right,
+  Sociais,
+  Img
 } from './styles'
 import MediaQuery from 'react-responsive'
 import Loguinho from '../../Components/Loguinho'
 import { Button } from '../../Components/Buttons/ButtonPrincipal';
 
 const url = localStorage.getItem('url')
-export default function TelaInicial() {
 
+const openInNewTab = (url) => {
+  window.open(url, '_blank');
+}
+
+export default function TelaInicial() {
   return (
     <>
       <MediaQuery minDeviceWidth={1000}>
@@ -23,10 +29,15 @@ export default function TelaInicial() {
               <Title>Obrigada!</Title>
               <SubTitle>Agora você também faz parte da nossa história!</SubTitle>
             </div>
+            <Sociais>
+              <Img src={"/Assets/Social/facebook.png"} onClick={() => openInNewTab('https://www.facebook.com/agenciaintegre/?ref=br_rs')} />
+              <Img src={"/Assets/Social/instagram.png"} onClick={() => openInNewTab('https://www.instagram.com/agenciaintegre/')} />
+              <Img src={"/Assets/logo-mobile.png"} onClick={() => openInNewTab('https://www.agenciaintegre.com.br/')} />
+            </Sociais>
             <div style={{ display: 'inline-block' }}>
-              <Button>
-                Começar!
-              </Button>
+              <a href="/" style={{ color: 'black' }}>
+                <Button> Recomeçar! </Button>
+              </a>
             </div>
           </Left>
           <Right url={`${url}`}>
@@ -47,9 +58,14 @@ export default function TelaInicial() {
           <Left>
             <Title>Obrigada!</Title>
             <SubTitle>Agora você também faz parte da nossa história!</SubTitle>
-            <Button style={{ margin: 30 }}>
-              Começar!
-            </Button>
+            <a href="/" style={{ color: 'black', margin: 30 }}>
+              <Button> Recomeçar! </Button>
+            </a>
+            <Sociais>
+              <Img src={"/Assets/Social/facebook.png"} onClick={() => openInNewTab('https://www.facebook.com/agenciaintegre/?ref=br_rs')} />
+              <Img src={"/Assets/Social/instagram.png"} onClick={() => openInNewTab('https://www.instagram.com/agenciaintegre/')} />
+              <Img src={"/Assets/logo-mobile.png"} onClick={() => openInNewTab('https://www.agenciaintegre.com.br/')} />
+            </Sociais>
           </Left>
         </Boddy>
       </MediaQuery>

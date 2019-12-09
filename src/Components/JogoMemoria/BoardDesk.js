@@ -38,9 +38,11 @@ export default class Memory extends Component {
     this.state.board.forEach((e) => {
       e.isVisible = true
     })
-    this.state.board.forEach((e) => {
-      e.isVisible = false
-    })
+    setTimeout(() => {
+      this.state.board.forEach((e) => {
+        e.isVisible = false
+      })
+    }, 100)
   }
 
   handleVisible(index) {
@@ -108,7 +110,7 @@ export default class Memory extends Component {
               </Mensagem>
               <a href="/Quinta" style={{ color: 'black' }}>
                 <Button style={{ marginTop: -10, marginBottom: 30 }}>
-                  Sou fera! Next!
+                  Parabéns! Mas ainda não acabou…
                   </Button>
               </a>
             </Box>

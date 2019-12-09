@@ -84,10 +84,10 @@ export const Right = styled.div`
 
 export const Title = styled.h1`
   color: #000;
-  width: 70%;
+  width: 80%;
   font-family: 'Muli', sans-serif;
   font-style: Black Italic;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 54px;
   font-weight: 900;
   word-break: break-word;

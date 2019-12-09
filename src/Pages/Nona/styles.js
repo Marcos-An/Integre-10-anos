@@ -28,11 +28,11 @@ export const Boddy = styled.div`
                       url('/Assets/Bg/Rectangle.svg');
 
     background-position: right 0px top 10px,
-                        left -10vh bottom 35vh,
-                        left 20px top 70px,
-                        right 30px top 230px,
-                        left 700px bottom 200px;
-    height: 100%;
+                         left -10vh bottom 46vh,
+                         left 20px top 70px,
+                         right 30px top 230px,
+                         left 700px bottom 200px;
+    height: 100%; 
     padding: 0px;
     grid-template-columns: 1fr;
   }
@@ -40,10 +40,10 @@ export const Boddy = styled.div`
   @media (min-width: 1500px) {
     padding: 20vh 40vh 20vh 20vh;
         background-position: right 20vh top 5vh,
-                         right 27vh bottom 8vh,
-                         left 10vh bottom 2vh,
-                         left 15vh top 15vh,
-                         right 115vh bottom 10vh;
+                             right 27vh bottom 8vh,
+                             left 10vh bottom 2vh,
+                             left 15vh top 15vh,
+                             right 115vh bottom 10vh;
   }
 `;
 
@@ -119,5 +119,23 @@ export const SubTitle = styled.h2`
     padding-top: 10px;
     font-size: 25px;
     width: 65%;
+  }
+`;
+
+export const Sociais = styled.div`
+    display: flex;
+    width: 20vh;
+    justify-content: space-between;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    justify-content: center;
+  }
+`;
+export const Img = styled.img`
+  height: 30px;
+
+  @media (max-width: 800px) {
+    margin: 0px 10px;
   }
 `;
