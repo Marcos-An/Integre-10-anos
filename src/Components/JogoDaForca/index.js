@@ -36,11 +36,6 @@ export default class JogoDaForca extends Component {
         },
         {
           type: 'warning',
-          palavra: 'brainst',
-          descricao: 'Explosão de ideias; Muita gente pensando junto; às vezes não serve pra nada, mas quando serve, meu amigo…',
-        },
-        {
-          type: 'warning',
           palavra: 'cafe',
           descricao: 'Bebida vital; Elixir da criatividade; Não há vida sem',
         }
@@ -73,7 +68,7 @@ export default class JogoDaForca extends Component {
     }, 100);
   }
   index() {
-    this.setState({ index: Math.floor(Math.random() * 3) })
+    this.setState({ index: Math.floor(Math.random() * 2) })
   }
   handlePalavra() {
     setTimeout(() => {
