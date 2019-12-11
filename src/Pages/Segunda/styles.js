@@ -74,8 +74,8 @@ export const Left = styled.div`
   @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
-    grid-row-start: 1;
-    height: 100vh;    
+    grid-row-start: 1; 
+    padding-bottom: 3vhs; 
     .Logo {
       margin-top: 5vh;
     }
@@ -128,9 +128,7 @@ export const Right = styled.div`
     }
     
     @media (max-width: 800px){
-      width: 100%;
       img {
-        width: 100%;
         margin-top: 7vh;
         margin-bottom: 5vh;
       }
