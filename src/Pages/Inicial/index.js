@@ -10,6 +10,7 @@ import MediaQuery from 'react-responsive'
 import Loguinho from '../../Components/Loguinho'
 import { ButtonInicio } from '../../Components/Buttons/ButtonPrincipal';
 import Video from '../../Components/Videos/PrimeiroVideo'
+import Video2 from '../../Components/Videos/PrimeiroVideo2'
 import PrimeiroJogo from '../../Components/JogoSubtracao'
 
 export default function TelaInicial() {
@@ -51,7 +52,7 @@ export default function TelaInicial() {
             <SubTitle>Conheça a nossa história enquanto se diverte!</SubTitle>
           </Left>
           <Right>
-            <Video />
+            <Video2 />
             <ButtonInicio style={{ margin: 30 }} onClick={() => setOpen(!isOpen)}>
               Começar!
           </ButtonInicio>
